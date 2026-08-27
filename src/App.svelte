@@ -167,7 +167,7 @@ async function confirmCompare() {
 }
 async function toggleCompareTie() {
   if (!compareCandidateId) return;
-  await withRecord((r) => toggleTie(r, compareCandidateId as string));
+  await withRecord((r) => toggleTie(r, compareCandidateId as string, now()));
 }
 
 async function onSetConfidence(level: 'high' | 'medium' | 'low') {
@@ -459,7 +459,23 @@ function downloadMethodology() {
 
       <nav class="pager">
         <button onclick={goPrev} disabled={currentIndex === 0}>← Previous</button>
-        <button onclick={goNext} disabled={currentIndex === session.targetOrder.length - 1}>Next →</button>
+        <div class="next-group">
+          {#if currentRecord.completedAt === null && currentRecord.phase2StartedAt}
+            <span class="incomplete-hint">
+              {#if currentRecord.selectedDyeId === null && currentRecord.ties.length < 2}
+                Pick a candidate (or tie 2+) to continue
+              {:else}
+                Set a confidence level to continue
+              {/if}
+            </span>
+          {/if}
+          <button
+            onclick={goNext}
+            disabled={currentIndex === session.targetOrder.length - 1 || currentRecord.completedAt === null}
+          >
+            Next →
+          </button>
+        </div>
       </nav>
     {/if}
   </main>
@@ -616,6 +632,16 @@ function downloadMethodology() {
   .pager {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  .next-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .incomplete-hint {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
   }
   .export-buttons {
     display: flex;

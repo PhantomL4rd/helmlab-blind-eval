@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dye Blind Retest</title>
+<style>
+  :root {
+    --bg: #eef0ea;
+    --surface: #ffffff;
+    --surface-2: #f7f6ef;
+    --ink: #23241f;
+    --ink-muted: #6b6a5f;
+    --accent: #1d3c5e;
+    --accent-soft: #7192ae;
+    --match: #3d6b4f;
+    --match-bg: #e3ece4;
+    --mismatch: #a15c3e;
+    --border: #d9d6c7;
+    --border-strong: #c3bfab;
+    --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Hiragino Mincho ProN', Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Segoe UI', sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', Menlo, 'Cascadia Mono', monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --bg: #14171a;
+      --surface: #1c2024;
+      --surface-2: #20242a;
+      --ink: #e7e5db;
+      --ink-muted: #97968a;
+      --accent: #8db0d4;
+      --accent-soft: #587691;
+      --match: #77b98a;
+      --match-bg: #223327;
+      --mismatch: #d68a63;
+      --border: #333831;
+      --border-strong: #454b41;
+    }
+  }
+  :root[data-theme='dark'] {
+    --bg: #14171a;
+    --surface: #1c2024;
+    --surface-2: #20242a;
+    --ink: #e7e5db;
+    --ink-muted: #97968a;
+    --accent: #8db0d4;
+    --accent-soft: #587691;
+    --match: #77b98a;
+    --match-bg: #223327;
+    --mismatch: #d68a63;
+    --border: #333831;
+    --border-strong: #454b41;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3.5rem 1.75rem 5rem;
+  }
+
+  header.masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid var(--border-strong);
+    margin-bottom: 2.5rem;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    margin: 0;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .dek {
+    font-size: 1.02rem;
+    color: var(--ink-muted);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .dek code, .note code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--surface-2);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+  }
+
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2.75rem;
+  }
+  .stat {
+    flex: 1 1 150px;
+    background: var(--surface);
+    padding: 1.1rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .stat .n {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+  }
+  .stat .label {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.01em;
+  }
+
+  section { margin-bottom: 3rem; }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    color: var(--ink);
+  }
+  .section-note {
+    color: var(--ink-muted);
+    font-size: 0.92rem;
+    max-width: 68ch;
+    margin: 0 0 1.25rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--surface-2);
+    text-align: left;
+    font-weight: 600;
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--border-strong);
+    white-space: nowrap;
+    font-size: 0.78rem;
+    letter-spacing: 0.01em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+  tbody td {
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--surface-2); }
+
+  .swatch {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-strong);
+    vertical-align: middle;
+    margin-right: 0.55rem;
+  }
+  .target-name .romaji { color: var(--ink-muted); font-size: 0.85em; }
+  .pick-empty { color: var(--ink-muted); }
+  .tie-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-right: 0.4rem;
+    letter-spacing: 0.02em;
+  }
+  .uncertain-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--mismatch);
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 0.05em 0.4em;
+    margin-left: 0.5rem;
+  }
+  .match-cell { text-align: center; }
+  .match-yes {
+    display: inline-block;
+    color: var(--match);
+    background: var(--match-bg);
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+  }
+  .rank-cell { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink-muted); }
+  .rank-cell.top { color: var(--ink); font-weight: 600; }
+  .confidence {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink-muted);
+  }
+  .confidence.high { color: var(--match); }
+
+  .retest-pick { display: inline-flex; align-items: center; margin-right: 0.9rem; }
+
+  footer.methodology {
+    border-top: 1px solid var(--border-strong);
+    padding-top: 2rem;
+    color: var(--ink-muted);
+    font-size: 0.88rem;
+  }
+  footer.methodology h2 { color: var(--ink); }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem 2rem;
+    margin-top: 1.25rem;
+  }
+  .meta-grid dt {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-soft);
+    margin-bottom: 0.2rem;
+  }
+  .meta-grid dd { margin: 0; color: var(--ink); font-size: 0.88rem; }
+  .meta-grid dd code { font-family: var(--font-mono); font-size: 0.85em; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    tbody tr { transition: background-color 0.12s ease; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <header class="masthead">
+    <span class="eyebrow">Perceptual benchmark — external to Helmlab</span>
+    <h1>Which FF14 dye actually looks closest?</h1>
+    <p class="dek">
+      64 traditional Japanese colors, each matched to an FF14 dye by a human eye — fully blind
+      to <code>dyeId</code>, dye names, and every color-distance algorithm. Compared here
+      against the current algorithmic mapping and against CIEDE2000, OKLab, and Helmlab ranks,
+      computed only after the human picks were already recorded.
+    </p>
+  </header>
+
+  <div class="stat-row" id="stat-row"></div>
+
+  <section>
+    <h2>Human pick vs. algorithmic baseline</h2>
+    <p class="section-note">
+      <strong>Current dyeId</strong> is colorant-picker's existing, algorithmically-chosen
+      mapping (CIEDE2000, with a Helmlab fallback) — not a human judgment. A tied human pick
+      (two-plus candidates judged equally closest) counts as a match if the current dyeId is
+      among the tied candidates.
+    </p>
+    <div class="table-wrap">
+      <table id="main-table">
+        <thead>
+          <tr>
+            <th>Target</th>
+            <th>Human pick</th>
+            <th>Current dyeId</th>
+            <th>Match</th>
+            <th>CIEDE2000</th>
+            <th>OKLab</th>
+            <th>Helmlab</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cross-check against the earlier non-blind judgment</h2>
+    <p class="section-note">
+      Four cases previously judged by hand, without blinding and limited to three
+      pre-labeled candidates (a follow-up to
+      <a href="https://github.com/Grkmyldz148/helmlab/issues/3" target="_blank" rel="noopener">Grkmyldz148/helmlab#3</a>).
+      Shown here purely as a cross-check against this retest, not as ground truth.
+    </p>
+    <div class="table-wrap">
+      <table id="existing-table">
+        <thead>
+          <tr>
+            <th>Target</th>
+            <th>Earlier pick (non-blind)</th>
+            <th>2026 blind retest pick</th>
+            <th>Match</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="methodology">
+    <h2>Methodology</h2>
+    <p class="section-note">
+      For each target, the evaluator first shortlisted plausible dyes from the <em>entire</em>
+      candidate pool (hue-sorted, no algorithm involved) — Phase 1. Only within that self-built
+      shortlist did side-by-side comparison happen, in randomized order — Phase 2. No
+      recommendation, rank, or color-difference score from any algorithm was shown at any point
+      during evaluation.
+    </p>
+    <dl class="meta-grid" id="meta-grid"></dl>
+  </footer>
+</main>
+
+<script id="report-data" type="application/json">
+__REPORT_DATA__
+</script>
+<script>
+  const data = JSON.parse(document.getElementById('report-data').textContent);
+  const { rows, existingRows, nameById, hexById, romajiById, matchCount, totalCount, metadata } = data;
+
+  function swatch(hex) {
+    return hex ? `<span class="swatch" style="background-color:${hex}"></span>` : '';
+  }
+  function dyeLabel(id) {
+    if (!id) return '';
+    return nameById[id] ?? id;
+  }
+  function rankCell(n) {
+    if (n == null) return '<td class="rank-cell">—</td>';
+    const top = n === 1 ? ' top' : '';
+    return `<td class="rank-cell${top}">${n}</td>`;
+  }
+
+  const tieOnlyCount = rows.filter((r) => !r.selectedDyeId && r.ties.length >= 2).length;
+  const uncertainCount = rows.filter((r) => r.uncertain).length;
+  const evaluators = [...new Set(rows.map((r) => r.evaluatorId))];
+
+  document.getElementById('stat-row').innerHTML = [
+    { n: `${matchCount} / ${totalCount}`, label: 'match the current dyeId' },
+    { n: tieOnlyCount, label: 'tie-only judgments (2+ equally closest)' },
+    { n: uncertainCount, label: 'flagged uncertain' },
+    { n: evaluators.length, label: evaluators.length === 1 ? `evaluator (${evaluators[0]})` : 'evaluators' },
+  ].map((s) => `<div class="stat"><span class="n">${s.n}</span><span class="label">${s.label}</span></div>`).join('');
+
+  const mainBody = rows.map((r) => {
+    const romaji = romajiById[r.targetId];
+    const targetCell = `
+      <td>
+        ${swatch(r.targetHex)}
+        <span class="target-name">${r.targetId}${romaji ? ` <span class="romaji">(${romaji})</span>` : ''}</span>
+      </td>`;
+
+    let pickCell;
+    if (r.selectedDyeId) {
+      pickCell = `<td>${swatch(hexById[r.selectedDyeId])}${dyeLabel(r.selectedDyeId)}${r.uncertain ? '<span class="uncertain-tag">uncertain</span>' : ''}</td>`;
+    } else if (r.ties.length >= 2) {
+      pickCell = `<td><span class="tie-tag">TIED</span>${r.ties.map((id) => swatch(hexById[id]) + dyeLabel(id)).join(', ')}</td>`;
+    } else {
+      pickCell = `<td class="pick-empty">— ${r.uncertain ? '<span class="uncertain-tag">uncertain</span>' : ''}</td>`;
+    }
+
+    const currentCell = `<td>${swatch(hexById[r.currentDyeId])}${dyeLabel(r.currentDyeId)}</td>`;
+    const matchCell = `<td class="match-cell">${r.matchesCurrentDyeId ? '<span class="match-yes">✓</span>' : ''}</td>`;
+    const conf = r.confidence ?? '—';
+    const confCell = `<td class="confidence${conf === 'high' ? ' high' : ''}">${conf}</td>`;
+
+    return `<tr>${targetCell}${pickCell}${currentCell}${matchCell}${rankCell(r.ranks?.ciede2000)}${rankCell(r.ranks?.oklab)}${rankCell(r.ranks?.helm)}${confCell}</tr>`;
+  }).join('');
+  document.querySelector('#main-table tbody').innerHTML = mainBody;
+
+  const existingBody = existingRows.map((r) => {
+    const romaji = romajiById[r.targetId];
+    const targetCell = `<td><span class="target-name">${r.targetId}${romaji ? ` <span class="romaji">(${romaji})</span>` : ''}</span></td>`;
+    const existingCell = `<td>${swatch(hexById[r.existingSelectedDyeId])}${r.existingSelectedDyeName}</td>`;
+    const picksCell = r.retestPicks.length === 0
+      ? '<td class="pick-empty">not yet evaluated</td>'
+      : `<td>${r.retestPicks.map((p) => `<span class="retest-pick">${swatch(hexById[p.selectedDyeId])}${p.evaluatorId}: ${dyeLabel(p.selectedDyeId)}</span>`).join('')}</td>`;
+    const matchCell = `<td class="match-cell">${r.anyRetestMatchesExisting ? '<span class="match-yes">✓</span>' : ''}</td>`;
+    return `<tr>${targetCell}${existingCell}${picksCell}${matchCell}</tr>`;
+  }).join('');
+  document.querySelector('#existing-table tbody').innerHTML = existingBody;
+
+  document.getElementById('meta-grid').innerHTML = [
+    { t: 'Candidate pool', d: `${metadata.poolSize} of ${metadata.totalDyes} dyes (metallic + vivid excluded)` },
+    { t: 'Targets', d: `${metadata.totalTargets}` },
+    { t: 'Phase 1 layout', d: metadata.layoutMethod },
+    { t: 'Method', d: metadata.method },
+    { t: 'Source commit', d: `<code>${metadata.sourceCommit.slice(0, 12)}</code>` },
+    { t: 'Snapshot generated', d: new Date(metadata.generatedAt).toISOString().slice(0, 10) },
+  ].map((m) => `<div><dt>${m.t}</dt><dd>${m.d}</dd></div>`).join('');
+</script>
+</body>
+</html>

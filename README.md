@@ -1,5 +1,19 @@
 # helmlab-blind-eval
 
+> **Just here for the results?** You don't need to clone this, `npm install`, or run anything.
+> Open `data/retest/exports/report.html` directly in a browser (double-click it, or
+> `file://` the path) — a single static page with every target, human pick, current dyeId,
+> and CIEDE2000/OKLab/Helmlab rank, color swatches included. That one file is enough to get
+> the whole picture.
+>
+> The same data is also available as plain JSON/Markdown in `data/retest/exports/`, no code
+> execution required either way:
+> - `methodology.md` — how the data was collected
+> - `human-picks.json` — the 64 human judgments (hex-keyed, no internal ids)
+> - `targets.json` / `dyes.json` / `evaluation-sessions.json` — supporting data
+>
+> Everything else below documents the local tool that *produced* that data.
+
 A local tool for collecting a new, algorithm-independent human-judgment dataset: for each of
 64 traditional Japanese colors (from
 [`colorant-picker`](https://github.com/PhantomL4rd/colorant-picker)), which FF14 dye looks

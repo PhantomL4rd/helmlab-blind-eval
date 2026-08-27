@@ -68,7 +68,7 @@
     "青"
   ],
   "startedAt": "2026-08-27T08:24:52.141Z",
-  "completedAt": null,
+  "completedAt": "2026-08-27T09:43:14.550Z",
   "records": {
     "紺青": {
       "sessionId": "PhantomL4rd__mtb9bs83",
@@ -684,13 +684,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:26:00.382Z",
       "phase1CompletedAt": "2026-08-27T08:26:14.132Z",
       "phase2StartedAt": "2026-08-27T08:26:14.132Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:08:30.853Z",
       "method": "blind-human-selection"
     },
     "浅紫": {
@@ -1013,13 +1013,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:26:33.082Z",
       "phase1CompletedAt": "2026-08-27T08:26:46.832Z",
       "phase2StartedAt": "2026-08-27T08:26:46.832Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:24:44.102Z",
       "method": "blind-human-selection"
     },
     "濃紅梅": {
@@ -1493,7 +1493,7 @@
       "phase1StartedAt": "2026-08-27T08:27:28.499Z",
       "phase1CompletedAt": "2026-08-27T08:27:41.549Z",
       "phase2StartedAt": "2026-08-27T08:27:41.549Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:33:15.331Z",
       "method": "blind-human-selection"
     },
     "淡青": {
@@ -1795,13 +1795,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:28:18.350Z",
       "phase1CompletedAt": "2026-08-27T08:28:31.400Z",
       "phase2StartedAt": "2026-08-27T08:28:31.400Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:34:49.636Z",
       "method": "blind-human-selection"
     },
     "濃蘇芳": {
@@ -1941,21 +1941,25 @@
         "dye_012",
         "dye_020"
       ],
-      "selectedDyeId": "dye_011",
+      "selectedDyeId": "dye_013",
       "selectionHistory": [
         {
           "dyeId": "dye_011",
           "at": "2026-08-27T08:28:50.684Z"
+        },
+        {
+          "dyeId": "dye_013",
+          "at": "2026-08-27T09:34:56.504Z"
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "medium",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:28:37.300Z",
       "phase1CompletedAt": "2026-08-27T08:28:45.567Z",
       "phase2StartedAt": "2026-08-27T08:28:45.567Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:34:57.436Z",
       "method": "blind-human-selection"
     },
     "淡紅": {
@@ -2103,13 +2107,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "medium",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:28:54.251Z",
       "phase1CompletedAt": "2026-08-27T08:29:01.500Z",
       "phase2StartedAt": "2026-08-27T08:29:01.500Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:42:30.559Z",
       "method": "blind-human-selection"
     },
     "瑠璃色": {
@@ -2264,13 +2268,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "medium",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:29:07.484Z",
       "phase1CompletedAt": "2026-08-27T08:29:15.600Z",
       "phase2StartedAt": "2026-08-27T08:29:15.600Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:42:34.242Z",
       "method": "blind-human-selection"
     },
     "浅紅": {
@@ -2424,21 +2428,25 @@
         "dye_089",
         "dye_095"
       ],
-      "selectedDyeId": "dye_095",
+      "selectedDyeId": "dye_008",
       "selectionHistory": [
         {
           "dyeId": "dye_095",
           "at": "2026-08-27T08:29:36.634Z"
+        },
+        {
+          "dyeId": "dye_008",
+          "at": "2026-08-27T09:42:38.559Z"
         }
       ],
       "ties": [],
-      "confidence": "medium",
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:29:21.834Z",
       "phase1CompletedAt": "2026-08-27T08:29:28.517Z",
       "phase2StartedAt": "2026-08-27T08:29:28.517Z",
-      "completedAt": "2026-08-27T08:29:37.851Z",
+      "completedAt": "2026-08-27T09:42:40.626Z",
       "method": "blind-human-selection"
     },
     "淡蘇芳": {
@@ -3073,7 +3081,7 @@
       "phase1StartedAt": "2026-08-27T08:30:27.001Z",
       "phase1CompletedAt": "2026-08-27T08:30:33.618Z",
       "phase2StartedAt": "2026-08-27T08:30:33.618Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:33:15.331Z",
       "method": "blind-human-selection"
     },
     "淡木賊": {
@@ -3371,13 +3379,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:31:13.535Z",
       "phase1CompletedAt": "2026-08-27T08:31:27.885Z",
       "phase2StartedAt": "2026-08-27T08:31:27.885Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:42:48.859Z",
       "method": "blind-human-selection"
     },
     "濃紅": {
@@ -3686,13 +3694,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:31:55.736Z",
       "phase1CompletedAt": "2026-08-27T08:32:05.669Z",
       "phase2StartedAt": "2026-08-27T08:32:05.669Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:42:56.492Z",
       "method": "blind-human-selection"
     },
     "鳥ノ子": {
@@ -3840,13 +3848,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:32:12.486Z",
       "phase1CompletedAt": "2026-08-27T08:32:19.302Z",
       "phase2StartedAt": "2026-08-27T08:32:19.302Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:42:59.759Z",
       "method": "blind-human-selection"
     },
     "薄色": {
@@ -3994,13 +4002,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "medium",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:32:23.419Z",
       "phase1CompletedAt": "2026-08-27T08:32:32.069Z",
       "phase2StartedAt": "2026-08-27T08:32:32.069Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:43:02.892Z",
       "method": "blind-human-selection"
     },
     "薄紫": {
@@ -6867,7 +6875,7 @@
       "phase1StartedAt": "2026-08-27T08:37:34.873Z",
       "phase1CompletedAt": "2026-08-27T08:37:44.939Z",
       "phase2StartedAt": "2026-08-27T08:37:44.939Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:33:15.331Z",
       "method": "blind-human-selection"
     },
     "縹": {
@@ -7984,13 +7992,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:39:58.301Z",
       "phase1CompletedAt": "2026-08-27T08:40:09.918Z",
       "phase2StartedAt": "2026-08-27T08:40:09.918Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:43:08.392Z",
       "method": "blind-human-selection"
     },
     "香": {
@@ -8278,13 +8286,13 @@
         }
       ],
       "ties": [],
-      "confidence": null,
+      "confidence": "high",
       "uncertain": false,
       "note": "",
       "phase1StartedAt": "2026-08-27T08:40:30.702Z",
       "phase1CompletedAt": "2026-08-27T08:40:35.701Z",
       "phase2StartedAt": "2026-08-27T08:40:35.701Z",
-      "completedAt": null,
+      "completedAt": "2026-08-27T09:43:14.543Z",
       "method": "blind-human-selection"
     },
     "萌黄": {

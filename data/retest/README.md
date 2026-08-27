@@ -17,6 +17,9 @@ sessions/   one file per evaluation session (data/retest/sessions/{sessionId}.js
 exports/    human-picks.json / targets.json / dyes.json / evaluation-sessions.json /
             methodology.md, ready to hand off. Generated from sessions/ + snapshot/blind/ —
             regenerate anytime with `npm run export` (or via the eval app's export view).
+            Also includes report.html — a single static page (no server, no code execution)
+            that's the easiest way to hand off results to someone who should never need to
+            run this repo. `npm run export` always regenerates both together.
 ```
 
 ## Why no algorithm ever pre-filters the candidate pool
@@ -64,8 +67,10 @@ themselves over time, not just across evaluators.
 
 During Phase 1/2, only `snapshot/blind/targets.blind.json` and `dyes.blind.json` (id+hex) are
 fetched — never dye names/tags, never `dyeId`, never any algorithm's score or rank. Names are
-revealed only in the export view, after answers are already recorded, and only
-`analysis.html` (a separate bundle, never imported by the eval app) reads `dyeId`. This is a
+revealed only in the export view, after answers are already recorded. `dyeId` is read in two
+places only, neither reachable from the eval app: `analysis.html` (a separate bundle, never
+imported by `index.html`) and `scripts/generate-report.mjs` (a CLI script, run after a retest
+completes, that pre-computes the same comparison into `exports/report.html`). This is a
 good-faith design for a local, single/few-evaluator tool, not a defense against an evaluator
 who deliberately inspects network requests or navigates to `snapshot/raw/` or
 `snapshot/blind/dyes.full.json` directly.

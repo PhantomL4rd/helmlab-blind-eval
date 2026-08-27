@@ -3,7 +3,11 @@ import type { TargetRecord } from './types';
 const MIN_SHORTLIST_SIZE = 2;
 
 function withCompletedAt(record: TargetRecord, now: string): TargetRecord {
-  const done = record.uncertain || (record.selectedDyeId !== null && record.confidence !== null);
+  // A winner isn't required if 2+ candidates are marked tied — "these are equally close" is
+  // itself a valid, recordable judgment. A single tie doesn't count: "tied with nothing" isn't
+  // a judgment.
+  const hasWinner = record.selectedDyeId !== null || record.ties.length >= 2;
+  const done = record.uncertain || (hasWinner && record.confidence !== null);
   return { ...record, completedAt: done ? now : null };
 }
 
@@ -48,7 +52,14 @@ export function toggleShortlist(record: TargetRecord, dyeId: string, now: string
 
   let next: TargetRecord = { ...record, shortlistedDyeIds, shortlistHistory };
   if (onList && record.selectedDyeId === dyeId) {
-    next = { ...next, selectedDyeId: null, ties: next.ties.filter((id) => id !== dyeId) };
+    // Confidence was recorded for this specific pick — dropping the pick without dropping
+    // confidence would let a later re-pick complete instantly on a stale judgment.
+    next = {
+      ...next,
+      selectedDyeId: null,
+      confidence: null,
+      ties: next.ties.filter((id) => id !== dyeId),
+    };
   } else if (onList) {
     next = { ...next, ties: next.ties.filter((id) => id !== dyeId) };
   }
@@ -86,11 +97,11 @@ export function setConfidence(
   return withCompletedAt({ ...record, confidence }, now);
 }
 
-export function toggleTie(record: TargetRecord, dyeId: string): TargetRecord {
+export function toggleTie(record: TargetRecord, dyeId: string, now: string): TargetRecord {
   const ties = record.ties.includes(dyeId)
     ? record.ties.filter((id) => id !== dyeId)
     : [...record.ties, dyeId];
-  return { ...record, ties };
+  return withCompletedAt({ ...record, ties }, now);
 }
 
 export function setUncertain(record: TargetRecord, value: boolean, now: string): TargetRecord {

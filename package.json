@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "snapshot": "node scripts/snapshot-data.mjs",
-    "export": "node scripts/export-cli.mjs",
+    "export": "node scripts/export-cli.mjs && node scripts/generate-report.mjs",
     "dev": "vite",
     "test": "vitest run",
     "test:watch": "vitest",

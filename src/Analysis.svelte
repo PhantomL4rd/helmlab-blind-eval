@@ -2,8 +2,14 @@
 // Post-hoc comparison only. This bundle is the ONLY place that reads the current
 // production dyeId (data/retest/snapshot/raw/traditional-colors.json) — it is never
 // imported by App.svelte / index.html.
+
 import type { AnalysisRow, ExistingJudgmentComparisonRow } from './lib/analysis-logic';
-import { buildAnalysisRows, buildExistingJudgmentComparisonRows } from './lib/analysis-logic';
+import {
+  buildAnalysisRows,
+  buildExistingJudgmentComparisonRows,
+  rgbToHex,
+} from './lib/analysis-logic';
+import { fetchTargetsBlind } from './lib/api';
 import type { SessionFile } from './lib/types';
 
 let loading = $state(true);
@@ -11,34 +17,40 @@ let error = $state<string | null>(null);
 let rows = $state<AnalysisRow[]>([]);
 let existingRows = $state<ExistingJudgmentComparisonRow[]>([]);
 let nameById = $state<Map<string, string>>(new Map());
+let hexById = $state<Map<string, string>>(new Map());
+let romajiById = $state<Map<string, string>>(new Map());
 
 async function load() {
   loading = true;
   error = null;
   try {
-    const [sessions, traditionalColors, dyes, existing]: [
-      SessionFile[],
-      { id: string; hex: string; dyeId?: string }[],
-      {
-        id: string;
-        name: string;
-        hex: string;
-        rgb: { r: number; g: number; b: number };
-        tags?: string[];
-      }[],
-      { cases: { targetId: string; selectedDyeId: string; selectedDyeName: string }[] },
-    ] = await Promise.all([
-      fetch('/api/sessions/all').then((r) => r.json()),
+    const [sessions, traditionalColors, dyes, existing, blindTargets] = await Promise.all([
+      fetch('/api/sessions/all').then((r) => r.json()) as Promise<SessionFile[]>,
       fetch('/data/retest/snapshot/raw/traditional-colors.json')
         .then((r) => r.json())
-        .then((j) => j.colors),
+        .then((j) => j.colors) as Promise<{ id: string; hex: string; dyeId?: string }[]>,
       fetch('/data/retest/snapshot/raw/dyes.json')
         .then((r) => r.json())
-        .then((j) => j.dyes),
-      fetch('/data/existing-human-judgments/issue3-followup.json').then((r) => r.json()),
+        .then((j) => j.dyes) as Promise<
+        {
+          id: string;
+          name: string;
+          hex?: string;
+          rgb: { r: number; g: number; b: number };
+          tags?: string[];
+        }[]
+      >,
+      fetch('/data/existing-human-judgments/issue3-followup.json').then((r) =>
+        r.json()
+      ) as Promise<{
+        cases: { targetId: string; selectedDyeId: string; selectedDyeName: string }[];
+      }>,
+      fetchTargetsBlind(),
     ]);
 
     nameById = new Map(dyes.map((d) => [d.id, d.name]));
+    hexById = new Map(dyes.map((d) => [d.id, d.hex ?? rgbToHex(d.rgb)]));
+    romajiById = new Map(blindTargets.map((t) => [t.id, t.romaji]));
     rows = buildAnalysisRows({ sessions, traditionalColors, dyes });
     existingRows = buildExistingJudgmentComparisonRows({
       existingCases: existing.cases,
@@ -93,11 +105,34 @@ const matchCount = $derived(rows.filter((r) => r.matchesCurrentDyeId).length);
           <tbody>
             {#each rows as row (row.sessionId + row.targetId)}
               <tr>
-                <td>{row.targetId}</td>
+                <td>
+                  <span class="swatch" style:background-color={row.targetHex}></span>
+                  {row.targetId} ({romajiById.get(row.targetId) ?? '—'})
+                </td>
                 <td>{row.evaluatorId}</td>
                 <td class="mono">{row.sessionId}</td>
-                <td>{row.selectedDyeId ? (nameById.get(row.selectedDyeId) ?? row.selectedDyeId) : '—'}</td>
-                <td>{row.currentDyeId ? (nameById.get(row.currentDyeId) ?? row.currentDyeId) : '—'}</td>
+                <td>
+                  {#if row.selectedDyeId}
+                    <span class="swatch" style:background-color={hexById.get(row.selectedDyeId)}
+                    ></span>
+                    {nameById.get(row.selectedDyeId) ?? row.selectedDyeId}
+                  {:else if row.ties.length >= 2}
+                    <em>Tied:</em>
+                    {#each row.ties as tieId (tieId)}
+                      <span class="swatch" style:background-color={hexById.get(tieId)}></span>
+                    {/each}
+                    {row.ties.map((id) => nameById.get(id) ?? id).join(', ')}
+                  {:else}
+                    —
+                  {/if}
+                </td>
+                <td>
+                  {#if row.currentDyeId}
+                    <span class="swatch" style:background-color={hexById.get(row.currentDyeId)}
+                    ></span>
+                  {/if}
+                  {row.currentDyeId ? (nameById.get(row.currentDyeId) ?? row.currentDyeId) : '—'}
+                </td>
                 <td class:yes={row.matchesCurrentDyeId}>{row.matchesCurrentDyeId ? '✓' : ''}</td>
                 <td>{row.ranks?.ciede2000 ?? '—'}</td>
                 <td>{row.ranks?.oklab ?? '—'}</td>
@@ -132,18 +167,27 @@ const matchCount = $derived(rows.filter((r) => r.matchesCurrentDyeId).length);
           <tbody>
             {#each existingRows as row (row.targetId)}
               <tr>
-                <td>{row.targetId}</td>
-                <td>{row.existingSelectedDyeName}</td>
+                <td>{row.targetId} ({romajiById.get(row.targetId) ?? '—'})</td>
+                <td>
+                  <span class="swatch" style:background-color={hexById.get(row.existingSelectedDyeId)}
+                  ></span>
+                  {row.existingSelectedDyeName}
+                </td>
                 <td>
                   {#if row.retestPicks.length === 0}
                     (not yet evaluated)
                   {:else}
-                    {row.retestPicks
-                      .map(
-                        (p) =>
-                          `${p.evaluatorId}: ${p.selectedDyeId ? (nameById.get(p.selectedDyeId) ?? p.selectedDyeId) : '—'}`
-                      )
-                      .join(' / ')}
+                    {#each row.retestPicks as p (p.sessionId)}
+                      <span class="retest-pick">
+                        {#if p.selectedDyeId}
+                          <span class="swatch" style:background-color={hexById.get(p.selectedDyeId)}
+                          ></span>
+                        {/if}
+                        {p.evaluatorId}: {p.selectedDyeId
+                          ? (nameById.get(p.selectedDyeId) ?? p.selectedDyeId)
+                          : '—'}
+                      </span>
+                    {/each}
                   {/if}
                 </td>
                 <td class:yes={row.anyRetestMatchesExisting}>{row.anyRetestMatchesExisting ? '✓' : ''}</td>
@@ -200,5 +244,23 @@ const matchCount = $derived(rows.filter((r) => r.matchesCurrentDyeId).length);
   td.yes {
     color: #1a7a3c;
     font-weight: 700;
+  }
+  .swatch {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+  .retest-pick {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.75rem;
+    white-space: nowrap;
+  }
+  .retest-pick:last-child {
+    margin-right: 0;
   }
 </style>

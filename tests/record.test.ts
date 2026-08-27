@@ -72,11 +72,26 @@ describe('toggleShortlist', () => {
     expect(r.completedAt).toBeNull();
   });
 
+  it('also clears confidence when the selected dye is removed from the shortlist, so a later re-pick cannot inherit a stale confidence', () => {
+    let r = draft();
+    r = toggleShortlist(r, 'dye_014', T1);
+    r = toggleShortlist(r, 'dye_015', T1);
+    r = enterPhase2(r, ['dye_014', 'dye_015'], T1);
+    r = selectDye(r, 'dye_014', T1);
+    r = setConfidence(r, 'high', T1);
+
+    r = toggleShortlist(r, 'dye_014', T2); // remove the selected one
+    expect(r.confidence).toBeNull();
+
+    r = selectDye(r, 'dye_015', T3);
+    expect(r.completedAt).toBeNull(); // must not auto-complete on the old confidence
+  });
+
   it('removes a removed dye from ties too', () => {
     let r = draft();
     r = toggleShortlist(r, 'dye_014', T1);
     r = toggleShortlist(r, 'dye_015', T1);
-    r = toggleTie(r, 'dye_015');
+    r = toggleTie(r, 'dye_015', T1);
     expect(r.ties).toEqual(['dye_015']);
     r = toggleShortlist(r, 'dye_015', T2);
     expect(r.ties).toEqual([]);
@@ -152,6 +167,54 @@ describe('selectDye / setConfidence / completedAt gating', () => {
     r = setConfidence(r, 'high', T1);
     r = selectDye(r, 'dye_015', T3);
     expect(r.completedAt).toBe(T3);
+  });
+});
+
+describe('tie-only completion (no single winner picked)', () => {
+  function shortlisted() {
+    let r = draft();
+    r = toggleShortlist(r, 'dye_014', T1);
+    r = toggleShortlist(r, 'dye_015', T1);
+    return enterPhase2(r, ['dye_014', 'dye_015'], T1);
+  }
+
+  it('completes on 2+ ties plus confidence, with no selectedDyeId required', () => {
+    let r = shortlisted();
+    r = toggleTie(r, 'dye_014', T1);
+    r = toggleTie(r, 'dye_015', T1);
+    r = setConfidence(r, 'medium', T2);
+    expect(r.selectedDyeId).toBeNull();
+    expect(r.completedAt).toBe(T2);
+  });
+
+  it('does not complete on a single tie even with confidence set', () => {
+    let r = shortlisted();
+    r = toggleTie(r, 'dye_014', T1);
+    r = setConfidence(r, 'medium', T2);
+    expect(r.completedAt).toBeNull();
+  });
+
+  it('un-tying below 2 clears completedAt again', () => {
+    let r = shortlisted();
+    r = toggleTie(r, 'dye_014', T1);
+    r = toggleTie(r, 'dye_015', T1);
+    r = setConfidence(r, 'medium', T2);
+    expect(r.completedAt).toBe(T2);
+
+    r = toggleTie(r, 'dye_015', T3); // back down to 1 tie
+    expect(r.completedAt).toBeNull();
+  });
+
+  it('removing a tied dye from the shortlist (dropping ties below 2) clears completedAt', () => {
+    let r = shortlisted();
+    r = toggleTie(r, 'dye_014', T1);
+    r = toggleTie(r, 'dye_015', T1);
+    r = setConfidence(r, 'medium', T2);
+    expect(r.completedAt).toBe(T2);
+
+    r = toggleShortlist(r, 'dye_015', T3); // remove one of the tied candidates
+    expect(r.ties).toEqual(['dye_014']);
+    expect(r.completedAt).toBeNull();
   });
 });
 

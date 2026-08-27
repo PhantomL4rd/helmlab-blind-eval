@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dye Blind Retest</title>
+<style>
+  :root {
+    --bg: #eef0ea;
+    --surface: #ffffff;
+    --surface-2: #f7f6ef;
+    --ink: #23241f;
+    --ink-muted: #6b6a5f;
+    --accent: #1d3c5e;
+    --accent-soft: #7192ae;
+    --match: #3d6b4f;
+    --match-bg: #e3ece4;
+    --mismatch: #a15c3e;
+    --border: #d9d6c7;
+    --border-strong: #c3bfab;
+    --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Hiragino Mincho ProN', Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Segoe UI', sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', Menlo, 'Cascadia Mono', monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --bg: #14171a;
+      --surface: #1c2024;
+      --surface-2: #20242a;
+      --ink: #e7e5db;
+      --ink-muted: #97968a;
+      --accent: #8db0d4;
+      --accent-soft: #587691;
+      --match: #77b98a;
+      --match-bg: #223327;
+      --mismatch: #d68a63;
+      --border: #333831;
+      --border-strong: #454b41;
+    }
+  }
+  :root[data-theme='dark'] {
+    --bg: #14171a;
+    --surface: #1c2024;
+    --surface-2: #20242a;
+    --ink: #e7e5db;
+    --ink-muted: #97968a;
+    --accent: #8db0d4;
+    --accent-soft: #587691;
+    --match: #77b98a;
+    --match-bg: #223327;
+    --mismatch: #d68a63;
+    --border: #333831;
+    --border-strong: #454b41;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3.5rem 1.75rem 5rem;
+  }
+
+  header.masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid var(--border-strong);
+    margin-bottom: 2.5rem;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    margin: 0;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .dek {
+    font-size: 1.02rem;
+    color: var(--ink-muted);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .dek code, .note code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--surface-2);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+  }
+
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2.75rem;
+  }
+  .stat {
+    flex: 1 1 150px;
+    background: var(--surface);
+    padding: 1.1rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .stat .n {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+  }
+  .stat .label {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.01em;
+  }
+
+  section { margin-bottom: 3rem; }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    color: var(--ink);
+  }
+  .section-note {
+    color: var(--ink-muted);
+    font-size: 0.92rem;
+    max-width: 68ch;
+    margin: 0 0 1.25rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--surface-2);
+    text-align: left;
+    font-weight: 600;
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--border-strong);
+    white-space: nowrap;
+    font-size: 0.78rem;
+    letter-spacing: 0.01em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+  tbody td {
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--surface-2); }
+
+  .swatch {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-strong);
+    vertical-align: middle;
+    margin-right: 0.55rem;
+  }
+  .target-name .romaji { color: var(--ink-muted); font-size: 0.85em; }
+  .pick-empty { color: var(--ink-muted); }
+  .tie-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-right: 0.4rem;
+    letter-spacing: 0.02em;
+  }
+  .uncertain-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--mismatch);
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 0.05em 0.4em;
+    margin-left: 0.5rem;
+  }
+  .match-cell { text-align: center; }
+  .match-yes {
+    display: inline-block;
+    color: var(--match);
+    background: var(--match-bg);
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+  }
+  .rank-cell { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink-muted); }
+  .rank-cell.top { color: var(--ink); font-weight: 600; }
+  .confidence {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink-muted);
+  }
+  .confidence.high { color: var(--match); }
+
+  .retest-pick { display: inline-flex; align-items: center; margin-right: 0.9rem; }
+
+  footer.methodology {
+    border-top: 1px solid var(--border-strong);
+    padding-top: 2rem;
+    color: var(--ink-muted);
+    font-size: 0.88rem;
+  }
+  footer.methodology h2 { color: var(--ink); }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem 2rem;
+    margin-top: 1.25rem;
+  }
+  .meta-grid dt {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-soft);
+    margin-bottom: 0.2rem;
+  }
+  .meta-grid dd { margin: 0; color: var(--ink); font-size: 0.88rem; }
+  .meta-grid dd code { font-family: var(--font-mono); font-size: 0.85em; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    tbody tr { transition: background-color 0.12s ease; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <header class="masthead">
+    <span class="eyebrow">Perceptual benchmark — external to Helmlab</span>
+    <h1>Which FF14 dye actually looks closest?</h1>
+    <p class="dek">
+      64 traditional Japanese colors, each matched to an FF14 dye by a human eye — fully blind
+      to <code>dyeId</code>, dye names, and every color-distance algorithm. Compared here
+      against the current algorithmic mapping and against CIEDE2000, OKLab, and Helmlab ranks,
+      computed only after the human picks were already recorded.
+    </p>
+  </header>
+
+  <div class="stat-row" id="stat-row"></div>
+
+  <section>
+    <h2>Human pick vs. algorithmic baseline</h2>
+    <p class="section-note">
+      <strong>Current dyeId</strong> is colorant-picker's existing, algorithmically-chosen
+      mapping (CIEDE2000, with a Helmlab fallback) — not a human judgment. A tied human pick
+      (two-plus candidates judged equally closest) counts as a match if the current dyeId is
+      among the tied candidates.
+    </p>
+    <div class="table-wrap">
+      <table id="main-table">
+        <thead>
+          <tr>
+            <th>Target</th>
+            <th>Human pick</th>
+            <th>Current dyeId</th>
+            <th>Match</th>
+            <th>CIEDE2000</th>
+            <th>OKLab</th>
+            <th>Helmlab</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cross-check against the earlier non-blind judgment</h2>
+    <p class="section-note">
+      Four cases previously judged by hand, without blinding and limited to three
+      pre-labeled candidates (a follow-up to
+      <a href="https://github.com/Grkmyldz148/helmlab/issues/3" target="_blank" rel="noopener">Grkmyldz148/helmlab#3</a>).
+      Shown here purely as a cross-check against this retest, not as ground truth.
+    </p>
+    <div class="table-wrap">
+      <table id="existing-table">
+        <thead>
+          <tr>
+            <th>Target</th>
+            <th>Earlier pick (non-blind)</th>
+            <th>2026 blind retest pick</th>
+            <th>Match</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="methodology">
+    <h2>Methodology</h2>
+    <p class="section-note">
+      For each target, the evaluator first shortlisted plausible dyes from the <em>entire</em>
+      candidate pool (hue-sorted, no algorithm involved) — Phase 1. Only within that self-built
+      shortlist did side-by-side comparison happen, in randomized order — Phase 2. No
+      recommendation, rank, or color-difference score from any algorithm was shown at any point
+      during evaluation.
+    </p>
+    <dl class="meta-grid" id="meta-grid"></dl>
+  </footer>
+</main>
+
+<script id="report-data" type="application/json">
+{"metadata":{"method":"full-pool-human-shortlist","excludedTags":["metallic","vivid"],"poolSize":97,"totalDyes":125,"totalTargets":64,"layoutMethod":"hue-sort","sourceCommit":"7a94d555a6879d05e2b2f3afc559724315790d0b","generatedAt":"2026-08-27T08:19:13.200Z"},"rows":[{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"紺青","targetHex":"#192f60","selectedDyeId":"dye_076","currentDyeId":"dye_078","matchesCurrentDyeId":false,"ranks":{"ciede2000":3,"oklab":6,"helm":2},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃薄色","targetHex":"#795083","selectedDyeId":"dye_091","currentDyeId":"dye_091","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"赤","targetHex":"#ec001a","selectedDyeId":"dye_011","currentDyeId":"dye_014","matchesCurrentDyeId":false,"ranks":{"ciede2000":6,"oklab":19,"helm":6},"ties":[],"confidence":"low","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃青","targetHex":"#264a2e","selectedDyeId":"dye_057","currentDyeId":"dye_057","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"浅紫","targetHex":"#c4a3bf","selectedDyeId":"dye_087","currentDyeId":"dye_087","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"女郎花","targetHex":"#f2f2b0","selectedDyeId":"dye_047","currentDyeId":"dye_047","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃紅梅","targetHex":"#491022","selectedDyeId":"dye_011","currentDyeId":"dye_010","matchesCurrentDyeId":false,"ranks":{"ciede2000":7,"oklab":23,"helm":8},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄紅梅","targetHex":"#e597b2","selectedDyeId":"dye_090","currentDyeId":"dye_090","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"紫","targetHex":"#884898","selectedDyeId":null,"currentDyeId":"dye_091","matchesCurrentDyeId":true,"ranks":null,"ties":["dye_092","dye_091"],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"淡青","targetHex":"#29905e","selectedDyeId":"dye_058","currentDyeId":"dye_056","matchesCurrentDyeId":false,"ranks":{"ciede2000":3,"oklab":8,"helm":2},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"紅×黄","targetHex":"#e47c23","selectedDyeId":"dye_029","currentDyeId":"dye_029","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃蘇芳","targetHex":"#491022","selectedDyeId":"dye_013","currentDyeId":"dye_010","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":1,"helm":2},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"淡紅","targetHex":"#d35871","selectedDyeId":"dye_014","currentDyeId":"dye_014","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"瑠璃色","targetHex":"#0f4c9d","selectedDyeId":"dye_076","currentDyeId":"dye_075","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":2,"helm":2},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"浅紅","targetHex":"#f3a0aa","selectedDyeId":"dye_008","currentDyeId":"dye_008","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"淡蘇芳","targetHex":"#871c40","selectedDyeId":"dye_011","currentDyeId":"dye_011","matchesCurrentDyeId":true,"ranks":{"ciede2000":3,"oklab":1,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃朽葉","targetHex":"#e07400","selectedDyeId":"dye_029","currentDyeId":"dye_029","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"青黒味","targetHex":"#384e1e","selectedDyeId":"dye_058","currentDyeId":"dye_053","matchesCurrentDyeId":false,"ranks":{"ciede2000":3,"oklab":5,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃二藍","targetHex":"#644a77","selectedDyeId":null,"currentDyeId":"dye_085","matchesCurrentDyeId":true,"ranks":null,"ties":["dye_084","dye_085"],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"淡木賊","targetHex":"#467852","selectedDyeId":"dye_058","currentDyeId":"dye_059","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":5,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"白瑩","targetHex":"#f1f3f3","selectedDyeId":"dye_093","currentDyeId":"dye_114","matchesCurrentDyeId":false,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃紅","targetHex":"#b40926","selectedDyeId":"dye_011","currentDyeId":"dye_015","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":4,"helm":3},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄青","targetHex":"#93b69c","selectedDyeId":"dye_098","currentDyeId":"dye_098","matchesCurrentDyeId":true,"ranks":{"ciede2000":2,"oklab":11,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"鳥ノ子","targetHex":"#fbf0d0","selectedDyeId":"dye_047","currentDyeId":"dye_047","matchesCurrentDyeId":true,"ranks":{"ciede2000":2,"oklab":1,"helm":2},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄色","targetHex":"#a869be","selectedDyeId":"dye_087","currentDyeId":"dye_087","matchesCurrentDyeId":true,"ranks":{"ciede2000":2,"oklab":4,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄紫","targetHex":"#c4a3bf","selectedDyeId":"dye_087","currentDyeId":"dye_087","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃紫","targetHex":"#4d384d","selectedDyeId":"dye_088","currentDyeId":"dye_088","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":6,"helm":2},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄黄","targetHex":"#f6f193","selectedDyeId":"dye_047","currentDyeId":"dye_047","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":2},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃萌黄","targetHex":"#32540a","selectedDyeId":"dye_058","currentDyeId":"dye_058","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":3,"helm":1},"ties":["dye_058"],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄紅","targetHex":"#f4b2ba","selectedDyeId":"dye_095","currentDyeId":"dye_095","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄萌黄","targetHex":"#badcad","selectedDyeId":"dye_098","currentDyeId":"dye_098","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"淡紫","targetHex":"#874da1","selectedDyeId":"dye_084","currentDyeId":"dye_084","matchesCurrentDyeId":true,"ranks":{"ciede2000":4,"oklab":2,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄朽葉","targetHex":"#e8d3a2","selectedDyeId":"dye_037","currentDyeId":"dye_037","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"朽葉","targetHex":"#917347","selectedDyeId":"dye_028","currentDyeId":"dye_026","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":3,"helm":2},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"檜皮色","targetHex":"#6e4632","selectedDyeId":"dye_022","currentDyeId":"dye_021","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":2,"helm":2},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"紅花","targetHex":"#e95464","selectedDyeId":"dye_014","currentDyeId":"dye_014","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃黄","targetHex":"#edb918","selectedDyeId":"dye_040","currentDyeId":"dye_040","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"葡萄","targetHex":"#6e1e51","selectedDyeId":"dye_092","currentDyeId":"dye_092","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"桜花","targetHex":"#fcbec2","selectedDyeId":"dye_095","currentDyeId":"dye_095","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄蘇芳","targetHex":"#a25768","selectedDyeId":"dye_092","currentDyeId":"dye_009","matchesCurrentDyeId":false,"ranks":{"ciede2000":4,"oklab":26,"helm":3},"ties":[],"confidence":"low","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"秘色","targetHex":"#abced8","selectedDyeId":"dye_065","currentDyeId":"dye_065","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"蘇芳","targetHex":"#a34150","selectedDyeId":"dye_014","currentDyeId":"dye_015","matchesCurrentDyeId":false,"ranks":{"ciede2000":6,"oklab":13,"helm":3},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"淡萌黄","targetHex":"#8fc947","selectedDyeId":null,"currentDyeId":"dye_055","matchesCurrentDyeId":true,"ranks":null,"ties":["dye_055","dye_056"],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"縹","targetHex":"#148cb8","selectedDyeId":"dye_068","currentDyeId":"dye_074","matchesCurrentDyeId":false,"ranks":{"ciede2000":3,"oklab":4,"helm":4},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"紅","targetHex":"#dc1a43","selectedDyeId":"dye_014","currentDyeId":"dye_014","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":2,"helm":1},"ties":[],"confidence":"low","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃縹","targetHex":"#2a4073","selectedDyeId":"dye_076","currentDyeId":"dye_076","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":true},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"紅梅","targetHex":"#ed858d","selectedDyeId":"dye_095","currentDyeId":"dye_008","matchesCurrentDyeId":false,"ranks":{"ciede2000":3,"oklab":18,"helm":5},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃香","targetHex":"#9e5c46","selectedDyeId":"dye_026","currentDyeId":"dye_015","matchesCurrentDyeId":false,"ranks":{"ciede2000":3,"oklab":1,"helm":5},"ties":[],"confidence":"low","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"二藍","targetHex":"#8c73a3","selectedDyeId":"dye_084","currentDyeId":"dye_084","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"黒","targetHex":"#2b2b2b","selectedDyeId":"dye_024","currentDyeId":"dye_007","matchesCurrentDyeId":false,"ranks":{"ciede2000":11,"oklab":5,"helm":4},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"香","targetHex":"#efcd9a","selectedDyeId":"dye_037","currentDyeId":"dye_037","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"白","targetHex":"#fffffe","selectedDyeId":"dye_093","currentDyeId":"dye_093","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"萌黄","targetHex":"#98c337","selectedDyeId":"dye_055","currentDyeId":"dye_055","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":true},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"濃赤","targetHex":"#a80d2a","selectedDyeId":"dye_011","currentDyeId":"dye_015","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":2,"helm":2},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄香","targetHex":"#f0cfa0","selectedDyeId":"dye_037","currentDyeId":"dye_037","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"黄","targetHex":"#f5e56b","selectedDyeId":"dye_043","currentDyeId":"dye_043","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"青×黄","targetHex":"#96a22a","selectedDyeId":"dye_050","currentDyeId":"dye_050","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"山吹","targetHex":"#f8b500","selectedDyeId":"dye_040","currentDyeId":"dye_040","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"香色","targetHex":"#efcd9a","selectedDyeId":"dye_033","currentDyeId":"dye_037","matchesCurrentDyeId":false,"ranks":{"ciede2000":7,"oklab":17,"helm":3},"ties":[],"confidence":"low","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"薄縹","targetHex":"#507ea4","selectedDyeId":"dye_068","currentDyeId":"dye_067","matchesCurrentDyeId":false,"ranks":{"ciede2000":3,"oklab":4,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"黄朽葉","targetHex":"#d3a243","selectedDyeId":"dye_039","currentDyeId":"dye_041","matchesCurrentDyeId":false,"ranks":{"ciede2000":2,"oklab":2,"helm":1},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"赤花","targetHex":"#d34c2c","selectedDyeId":"dye_019","currentDyeId":"dye_019","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"淡黄","targetHex":"#e6ec2e","selectedDyeId":"dye_043","currentDyeId":"dye_050","matchesCurrentDyeId":false,"ranks":{"ciede2000":1,"oklab":1,"helm":2},"ties":[],"confidence":"medium","uncertain":false},{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","targetId":"青","targetHex":"#2d5434","selectedDyeId":"dye_057","currentDyeId":"dye_057","matchesCurrentDyeId":true,"ranks":{"ciede2000":1,"oklab":1,"helm":1},"ties":[],"confidence":"high","uncertain":false}],"existingRows":[{"targetId":"濃赤","existingSelectedDyeId":"dye_011","existingSelectedDyeName":"Dalamud Red","retestPicks":[{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","selectedDyeId":"dye_011"}],"anyRetestMatchesExisting":true},{"targetId":"濃紅","existingSelectedDyeId":"dye_116","existingSelectedDyeName":"Carmine Red","retestPicks":[{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","selectedDyeId":"dye_011"}],"anyRetestMatchesExisting":false},{"targetId":"濃香","existingSelectedDyeId":"dye_019","existingSelectedDyeName":"Sunset Orange","retestPicks":[{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","selectedDyeId":"dye_026"}],"anyRetestMatchesExisting":false},{"targetId":"黄","existingSelectedDyeId":"dye_043","existingSelectedDyeName":"Cream Yellow","retestPicks":[{"sessionId":"PhantomL4rd__mtb9bs83","evaluatorId":"PhantomL4rd","selectedDyeId":"dye_043"}],"anyRetestMatchesExisting":true}],"nameById":{"dye_002":"Snow White","dye_003":"Ash Grey","dye_004":"Goobbue Grey","dye_005":"Slate Grey","dye_006":"Charcoal Grey","dye_007":"Soot Black","dye_008":"Rose Pink","dye_009":"Lilac Purple","dye_010":"Rolanberry Red","dye_011":"Dalamud Red","dye_012":"Rust Red","dye_013":"Wine Red","dye_014":"Coral Pink","dye_015":"Blood Red","dye_016":"Salmon Pink","dye_017":"Ruby Red","dye_018":"Cherry Pink","dye_019":"Sunset Orange","dye_020":"Mesa Red","dye_021":"Bark Brown","dye_022":"Chocolate Brown","dye_023":"Russet Brown","dye_024":"Kobold Brown","dye_025":"Cork Brown","dye_026":"Qiqirn Brown","dye_027":"Opo-opo Brown","dye_028":"Aldgoat Brown","dye_029":"Pumpkin Orange","dye_030":"Acorn Brown","dye_031":"Orchard Brown","dye_032":"Chestnut Brown","dye_033":"Gobbiebag Brown","dye_034":"Shale Brown","dye_035":"Mole Brown","dye_036":"Loam Brown","dye_037":"Bone White","dye_038":"Ul Brown","dye_039":"Desert Yellow","dye_040":"Honey Yellow","dye_041":"Millioncorn Yellow","dye_042":"Coeurl Yellow","dye_043":"Cream Yellow","dye_044":"Halatali Yellow","dye_045":"Raisin Brown","dye_046":"Canary Yellow","dye_047":"Vanilla Yellow","dye_048":"Mud Green","dye_049":"Sylph Green","dye_050":"Lime Green","dye_051":"Moss Green","dye_052":"Meadow Green","dye_053":"Olive Green","dye_054":"Marsh Green","dye_055":"Apple Green","dye_056":"Cactuar Green","dye_057":"Hunter Green","dye_058":"Ochu Green","dye_059":"Adamantoise Green","dye_060":"Nophica Green","dye_061":"Deepwood Green","dye_062":"Celeste Green","dye_063":"Turquoise Green","dye_064":"Morbol Green","dye_065":"Ice Blue","dye_066":"Sky Blue","dye_067":"Seafog Blue","dye_068":"Peacock Blue","dye_069":"Rhotano Blue","dye_070":"Corpse Blue","dye_071":"Ceruleum Blue","dye_072":"Woad Blue","dye_073":"Ink Blue","dye_074":"Raptor Blue","dye_075":"Othard Blue","dye_076":"Storm Blue","dye_077":"Void Blue","dye_078":"Royal Blue","dye_079":"Midnight Blue","dye_080":"Shadow Blue","dye_081":"Abyssal Blue","dye_082":"Dragoon Blue","dye_083":"Turquoise Blue","dye_084":"Lavender Purple","dye_085":"Gloom Purple","dye_086":"Currant Purple","dye_087":"Iris Purple","dye_088":"Grape Purple","dye_089":"Lotus Pink","dye_090":"Colibri Pink","dye_091":"Plum Purple","dye_092":"Regal Purple","dye_093":"Pure White","dye_094":"Jet Black","dye_095":"Pastel Pink","dye_096":"Dark Red","dye_097":"Dark Brown","dye_098":"Pastel Green","dye_099":"Dark Green","dye_100":"Pastel Blue","dye_101":"Dark Blue","dye_102":"Pastel Purple","dye_103":"Dark Purple","dye_104":"Metallic Silver","dye_105":"Metallic Gold","dye_106":"Metallic Red","dye_107":"Metallic Orange","dye_108":"Metallic Yellow","dye_109":"Metallic Green","dye_110":"Metallic Sky Blue","dye_111":"Metallic Blue","dye_112":"Metallic Purple","dye_113":"Gunmetal Black","dye_114":"Pearl White","dye_115":"Metallic Brass","dye_116":"Carmine Red","dye_117":"Neon Pink","dye_118":"Bright Orange","dye_119":"Neon Yellow","dye_120":"Neon Green","dye_121":"Azure Blue","dye_122":"Violet Purple","dye_123":"Metallic Pink","dye_124":"Metallic Ruby Red","dye_125":"Metallic Cobalt Green","dye_126":"Metallic Dark Blue"},"hexById":{"dye_002":"#e4dfd0","dye_003":"#aca8a2","dye_004":"#898784","dye_005":"#656565","dye_006":"#484742","dye_007":"#2b2923","dye_008":"#e69f96","dye_009":"#836969","dye_010":"#5b1729","dye_011":"#781a1a","dye_012":"#622207","dye_013":"#451511","dye_014":"#cc6c5e","dye_015":"#913b27","dye_016":"#e4aa8a","dye_017":"#e40011","dye_018":"#f5379b","dye_019":"#b75c2d","dye_020":"#7d3906","dye_021":"#6a4b37","dye_022":"#6e3d24","dye_023":"#4f2d1f","dye_024":"#30211b","dye_025":"#c99156","dye_026":"#996e3f","dye_027":"#7b5c2d","dye_028":"#a2875c","dye_029":"#c57424","dye_030":"#8e581b","dye_031":"#644216","dye_032":"#3d290d","dye_033":"#b9a489","dye_034":"#92816c","dye_035":"#615245","dye_036":"#3f3329","dye_037":"#ebd3a0","dye_038":"#b7a370","dye_039":"#dbb457","dye_040":"#fac62b","dye_041":"#e49e34","dye_042":"#bc8804","dye_043":"#f2d770","dye_044":"#a58430","dye_045":"#403311","dye_046":"#fef864","dye_047":"#fbf1b4","dye_048":"#585230","dye_049":"#bbbb8a","dye_050":"#abb054","dye_051":"#707326","dye_052":"#8b9c63","dye_053":"#4b5232","dye_054":"#323621","dye_055":"#9bb363","dye_056":"#658241","dye_057":"#284b2c","dye_058":"#406339","dye_059":"#5f7558","dye_060":"#3b4d3c","dye_061":"#1e2a21","dye_062":"#96bdb9","dye_063":"#437272","dye_064":"#1f4646","dye_065":"#b2c4ce","dye_066":"#83b0d2","dye_067":"#6481a0","dye_068":"#3b6886","dye_069":"#1c3d54","dye_070":"#8e9bac","dye_071":"#4f5766","dye_072":"#2f3851","dye_073":"#1a1f27","dye_074":"#5b7fc0","dye_075":"#2f5889","dye_076":"#234172","dye_077":"#112944","dye_078":"#273067","dye_079":"#181937","dye_080":"#373747","dye_081":"#312d57","dye_082":"#000ea2","dye_083":"#04afcd","dye_084":"#877fae","dye_085":"#514560","dye_086":"#322c3b","dye_087":"#b79ebc","dye_088":"#3b2a3d","dye_089":"#fecef5","dye_090":"#dc9bca","dye_091":"#79526c","dye_092":"#66304e","dye_093":"#f9f8f4","dye_094":"#1e1e1e","dye_095":"#fdc8c6","dye_096":"#321919","dye_097":"#28211c","dye_098":"#bacfaa","dye_099":"#152c2c","dye_100":"#96a4d9","dye_101":"#121f2d","dye_102":"#bbb5da","dye_103":"#232026","dye_104":"#a7a7a7","dye_105":"#ede63d","dye_106":"#b61d4b","dye_107":"#e48c2f","dye_108":"#f4da46","dye_109":"#22a757","dye_110":"#5ed4e6","dye_111":"#5052d9","dye_112":"#a366c2","dye_113":"#606068","dye_114":"#e9e3da","dye_115":"#e7d197","dye_116":"#de0b16","dye_117":"#ed118e","dye_118":"#f45011","dye_119":"#dfea08","dye_120":"#b5f710","dye_121":"#3a4c90","dye_122":"#62508f","dye_123":"#a2596b","dye_124":"#1f0000","dye_125":"#15423f","dye_126":"#08021f"},"romajiById":{"白":"shiro","黒":"kuro","赤":"aka","青":"ao","黄":"ki","紅":"kurenai","紫":"murasaki","濃紫":"kokimurasaki","香":"kou","縹":"hanada","蘇芳":"suou","萌黄":"moegi","紅梅":"koubai","紅花":"benibana","赤花":"akabana","二藍":"futaai","女郎花":"ominaeshi","朽葉":"kuchiba","黄朽葉":"kikuchiba","濃朽葉":"koikuchiba","薄朽葉":"usukuchiba","檜皮色":"hiwadairo","瑠璃色":"ruriiro","秘色":"hisoku","紺青":"konjou","香色":"kouiro","白瑩":"shirotsuya","鳥ノ子":"torinoko","淡紅":"awakurenai","淡紫":"awamurasaki","浅紫":"asamurasaki","淡青":"awaao","淡黄":"awaki","薄黄":"usuki","淡蘇芳":"awasuou","淡萌黄":"awamoegi","淡木賊":"awatokusa","薄色":"usuiro","濃薄色":"kokiusuiro","薄紅":"usukurenai","薄紅梅":"usukoubai","薄紫":"usumurasaki","薄香":"usukou","山吹":"yamabuki","薄青":"usuao","薄蘇芳":"ususuou","薄萌黄":"usumoegi","濃赤":"kokiaka","濃青":"kokiao","濃黄":"kokiki","濃紅":"kokikurenai","濃紅梅":"kokikoubai","濃香":"kokikou","濃蘇芳":"kokisuou","濃萌黄":"kokimoegi","濃二藍":"kokifutaai","浅紅":"asakikurenai","青黒味":"aoguromi","紅×黄":"kurenaitoki","青×黄":"aotoki","桜花":"sakurabana","濃縹":"kokihanada","薄縹":"usuhanada","葡萄":"ebi"},"matchCount":41,"totalCount":64}
+</script>
+<script>
+  const data = JSON.parse(document.getElementById('report-data').textContent);
+  const { rows, existingRows, nameById, hexById, romajiById, matchCount, totalCount, metadata } = data;
+
+  function swatch(hex) {
+    return hex ? `<span class="swatch" style="background-color:${hex}"></span>` : '';
+  }
+  function dyeLabel(id) {
+    if (!id) return '';
+    return nameById[id] ?? id;
+  }
+  function rankCell(n) {
+    if (n == null) return '<td class="rank-cell">—</td>';
+    const top = n === 1 ? ' top' : '';
+    return `<td class="rank-cell${top}">${n}</td>`;
+  }
+
+  const tieOnlyCount = rows.filter((r) => !r.selectedDyeId && r.ties.length >= 2).length;
+  const uncertainCount = rows.filter((r) => r.uncertain).length;
+  const evaluators = [...new Set(rows.map((r) => r.evaluatorId))];
+
+  document.getElementById('stat-row').innerHTML = [
+    { n: `${matchCount} / ${totalCount}`, label: 'match the current dyeId' },
+    { n: tieOnlyCount, label: 'tie-only judgments (2+ equally closest)' },
+    { n: uncertainCount, label: 'flagged uncertain' },
+    { n: evaluators.length, label: evaluators.length === 1 ? `evaluator (${evaluators[0]})` : 'evaluators' },
+  ].map((s) => `<div class="stat"><span class="n">${s.n}</span><span class="label">${s.label}</span></div>`).join('');
+
+  const mainBody = rows.map((r) => {
+    const romaji = romajiById[r.targetId];
+    const targetCell = `
+      <td>
+        ${swatch(r.targetHex)}
+        <span class="target-name">${r.targetId}${romaji ? ` <span class="romaji">(${romaji})</span>` : ''}</span>
+      </td>`;
+
+    let pickCell;
+    if (r.selectedDyeId) {
+      pickCell = `<td>${swatch(hexById[r.selectedDyeId])}${dyeLabel(r.selectedDyeId)}${r.uncertain ? '<span class="uncertain-tag">uncertain</span>' : ''}</td>`;
+    } else if (r.ties.length >= 2) {
+      pickCell = `<td><span class="tie-tag">TIED</span>${r.ties.map((id) => swatch(hexById[id]) + dyeLabel(id)).join(', ')}</td>`;
+    } else {
+      pickCell = `<td class="pick-empty">— ${r.uncertain ? '<span class="uncertain-tag">uncertain</span>' : ''}</td>`;
+    }
+
+    const currentCell = `<td>${swatch(hexById[r.currentDyeId])}${dyeLabel(r.currentDyeId)}</td>`;
+    const matchCell = `<td class="match-cell">${r.matchesCurrentDyeId ? '<span class="match-yes">✓</span>' : ''}</td>`;
+    const conf = r.confidence ?? '—';
+    const confCell = `<td class="confidence${conf === 'high' ? ' high' : ''}">${conf}</td>`;
+
+    return `<tr>${targetCell}${pickCell}${currentCell}${matchCell}${rankCell(r.ranks?.ciede2000)}${rankCell(r.ranks?.oklab)}${rankCell(r.ranks?.helm)}${confCell}</tr>`;
+  }).join('');
+  document.querySelector('#main-table tbody').innerHTML = mainBody;
+
+  const existingBody = existingRows.map((r) => {
+    const romaji = romajiById[r.targetId];
+    const targetCell = `<td><span class="target-name">${r.targetId}${romaji ? ` <span class="romaji">(${romaji})</span>` : ''}</span></td>`;
+    const existingCell = `<td>${swatch(hexById[r.existingSelectedDyeId])}${r.existingSelectedDyeName}</td>`;
+    const picksCell = r.retestPicks.length === 0
+      ? '<td class="pick-empty">not yet evaluated</td>'
+      : `<td>${r.retestPicks.map((p) => `<span class="retest-pick">${swatch(hexById[p.selectedDyeId])}${p.evaluatorId}: ${dyeLabel(p.selectedDyeId)}</span>`).join('')}</td>`;
+    const matchCell = `<td class="match-cell">${r.anyRetestMatchesExisting ? '<span class="match-yes">✓</span>' : ''}</td>`;
+    return `<tr>${targetCell}${existingCell}${picksCell}${matchCell}</tr>`;
+  }).join('');
+  document.querySelector('#existing-table tbody').innerHTML = existingBody;
+
+  document.getElementById('meta-grid').innerHTML = [
+    { t: 'Candidate pool', d: `${metadata.poolSize} of ${metadata.totalDyes} dyes (metallic + vivid excluded)` },
+    { t: 'Targets', d: `${metadata.totalTargets}` },
+    { t: 'Phase 1 layout', d: metadata.layoutMethod },
+    { t: 'Method', d: metadata.method },
+    { t: 'Source commit', d: `<code>${metadata.sourceCommit.slice(0, 12)}</code>` },
+    { t: 'Snapshot generated', d: new Date(metadata.generatedAt).toISOString().slice(0, 10) },
+  ].map((m) => `<div><dt>${m.t}</dt><dd>${m.d}</dd></div>`).join('');
+</script>
+</body>
+</html>

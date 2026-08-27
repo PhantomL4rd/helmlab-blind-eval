@@ -25,7 +25,7 @@ ColorSpace.register(Helmlab);
 // what the evaluator actually chose from.
 export const ANALYSIS_EXCLUDED_TAGS = ['metallic', 'vivid'];
 
-function rgbToHex(rgb: { r: number; g: number; b: number }): string {
+export function rgbToHex(rgb: { r: number; g: number; b: number }): string {
   const h = (n: number) =>
     Math.max(0, Math.min(255, Math.round(n)))
       .toString(16)
@@ -148,7 +148,11 @@ export function buildAnalysisRows(params: {
       targetHex: record.targetHex,
       selectedDyeId: record.selectedDyeId,
       currentDyeId,
-      matchesCurrentDyeId: record.selectedDyeId !== null && record.selectedDyeId === currentDyeId,
+      // A tie-only completion (no single selectedDyeId) still counts as a match if the current
+      // dyeId is one of the tied candidates — the human judged it equally-closest, not wrong.
+      matchesCurrentDyeId:
+        currentDyeId !== null &&
+        (record.selectedDyeId === currentDyeId || record.ties.includes(currentDyeId)),
       ranks,
       ties: record.ties,
       confidence: record.confidence,

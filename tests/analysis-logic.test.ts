@@ -101,6 +101,36 @@ describe('buildAnalysisRows', () => {
     expect(rows[0].ranks?.ciede2000).toBe(1);
   });
 
+  it('flags a match when a tie-only completion (no single selectedDyeId) includes the current dyeId among its ties', () => {
+    const rows = buildAnalysisRows({
+      sessions: [
+        makeSession({
+          records: {
+            赤: makeRecord({ selectedDyeId: null, ties: ['d_darkred', 'd_red'] }),
+          },
+        }),
+      ],
+      traditionalColors: traditionalFixture,
+      dyes: fixtureDyes,
+    });
+    expect(rows[0].matchesCurrentDyeId).toBe(true);
+  });
+
+  it('does not flag a match for a tie-only completion when the current dyeId is not among the ties', () => {
+    const rows = buildAnalysisRows({
+      sessions: [
+        makeSession({
+          records: {
+            赤: makeRecord({ selectedDyeId: null, ties: ['d_darkred', 'd_orange'] }),
+          },
+        }),
+      ],
+      traditionalColors: traditionalFixture,
+      dyes: fixtureDyes,
+    });
+    expect(rows[0].matchesCurrentDyeId).toBe(false);
+  });
+
   it('flags a mismatch and still reports ranks for the human pick', () => {
     const rows = buildAnalysisRows({
       sessions: [makeSession({ records: { 赤: makeRecord({ selectedDyeId: 'd_darkred' }) } })],
