@@ -1,0 +1,386 @@
+[
+  {
+    "id": "白",
+    "reading": "しろ",
+    "hex": "#fffffe",
+    "romaji": "shiro"
+  },
+  {
+    "id": "黒",
+    "reading": "くろ",
+    "hex": "#2b2b2b",
+    "romaji": "kuro"
+  },
+  {
+    "id": "赤",
+    "reading": "あか",
+    "hex": "#ec001a",
+    "romaji": "aka"
+  },
+  {
+    "id": "青",
+    "reading": "あお",
+    "hex": "#2d5434",
+    "romaji": "ao"
+  },
+  {
+    "id": "黄",
+    "reading": "き",
+    "hex": "#f5e56b",
+    "romaji": "ki"
+  },
+  {
+    "id": "紅",
+    "reading": "くれない",
+    "hex": "#dc1a43",
+    "romaji": "kurenai"
+  },
+  {
+    "id": "紫",
+    "reading": "むらさき",
+    "hex": "#884898",
+    "romaji": "murasaki"
+  },
+  {
+    "id": "濃紫",
+    "reading": "こきむらさき",
+    "hex": "#4d384d",
+    "romaji": "kokimurasaki"
+  },
+  {
+    "id": "香",
+    "reading": "こう",
+    "hex": "#efcd9a",
+    "romaji": "kou"
+  },
+  {
+    "id": "縹",
+    "reading": "はなだ",
+    "hex": "#148cb8",
+    "romaji": "hanada"
+  },
+  {
+    "id": "蘇芳",
+    "reading": "すおう",
+    "hex": "#a34150",
+    "romaji": "suou"
+  },
+  {
+    "id": "萌黄",
+    "reading": "もえぎ",
+    "hex": "#98c337",
+    "romaji": "moegi"
+  },
+  {
+    "id": "紅梅",
+    "reading": "こうばい",
+    "hex": "#ed858d",
+    "romaji": "koubai"
+  },
+  {
+    "id": "紅花",
+    "reading": "べにばな",
+    "hex": "#e95464",
+    "romaji": "benibana"
+  },
+  {
+    "id": "赤花",
+    "reading": "あかばな",
+    "hex": "#d34c2c",
+    "romaji": "akabana"
+  },
+  {
+    "id": "二藍",
+    "reading": "ふたあい",
+    "hex": "#8c73a3",
+    "romaji": "futaai"
+  },
+  {
+    "id": "女郎花",
+    "reading": "おみなえし",
+    "hex": "#f2f2b0",
+    "romaji": "ominaeshi"
+  },
+  {
+    "id": "朽葉",
+    "reading": "くちば",
+    "hex": "#917347",
+    "romaji": "kuchiba"
+  },
+  {
+    "id": "黄朽葉",
+    "reading": "きくちば",
+    "hex": "#d3a243",
+    "romaji": "kikuchiba"
+  },
+  {
+    "id": "濃朽葉",
+    "reading": "こいくちば",
+    "hex": "#e07400",
+    "romaji": "koikuchiba"
+  },
+  {
+    "id": "薄朽葉",
+    "reading": "うすくちば",
+    "hex": "#e8d3a2",
+    "romaji": "usukuchiba"
+  },
+  {
+    "id": "檜皮色",
+    "reading": "ひわだいろ",
+    "hex": "#6e4632",
+    "romaji": "hiwadairo"
+  },
+  {
+    "id": "瑠璃色",
+    "reading": "るりいろ",
+    "hex": "#0f4c9d",
+    "romaji": "ruriiro"
+  },
+  {
+    "id": "秘色",
+    "reading": "ひそく",
+    "hex": "#abced8",
+    "romaji": "hisoku"
+  },
+  {
+    "id": "紺青",
+    "reading": "こんじょう",
+    "hex": "#192f60",
+    "romaji": "konjou"
+  },
+  {
+    "id": "香色",
+    "reading": "こういろ",
+    "hex": "#efcd9a",
+    "romaji": "kouiro"
+  },
+  {
+    "id": "白瑩",
+    "reading": "しろつや",
+    "hex": "#f1f3f3",
+    "romaji": "shirotsuya"
+  },
+  {
+    "id": "鳥ノ子",
+    "reading": "とりのこ",
+    "hex": "#fbf0d0",
+    "romaji": "torinoko"
+  },
+  {
+    "id": "淡紅",
+    "reading": "あわくれない",
+    "hex": "#d35871",
+    "romaji": "awakurenai"
+  },
+  {
+    "id": "淡紫",
+    "reading": "あわむらさき",
+    "hex": "#874da1",
+    "romaji": "awamurasaki"
+  },
+  {
+    "id": "浅紫",
+    "reading": "あさむらさき",
+    "hex": "#c4a3bf",
+    "romaji": "asamurasaki"
+  },
+  {
+    "id": "淡青",
+    "reading": "あわあお",
+    "hex": "#29905e",
+    "romaji": "awaao"
+  },
+  {
+    "id": "淡黄",
+    "reading": "あわき",
+    "hex": "#e6ec2e",
+    "romaji": "awaki"
+  },
+  {
+    "id": "薄黄",
+    "reading": "うすき",
+    "hex": "#f6f193",
+    "romaji": "usuki"
+  },
+  {
+    "id": "淡蘇芳",
+    "reading": "あわすおう",
+    "hex": "#871c40",
+    "romaji": "awasuou"
+  },
+  {
+    "id": "淡萌黄",
+    "reading": "あわもえぎ",
+    "hex": "#8fc947",
+    "romaji": "awamoegi"
+  },
+  {
+    "id": "淡木賊",
+    "reading": "あわとくさ",
+    "hex": "#467852",
+    "romaji": "awatokusa"
+  },
+  {
+    "id": "薄色",
+    "reading": "うすいろ",
+    "hex": "#a869be",
+    "romaji": "usuiro"
+  },
+  {
+    "id": "濃薄色",
+    "reading": "こきうすいろ",
+    "hex": "#795083",
+    "romaji": "kokiusuiro"
+  },
+  {
+    "id": "薄紅",
+    "reading": "うすくれない",
+    "hex": "#f4b2ba",
+    "romaji": "usukurenai"
+  },
+  {
+    "id": "薄紅梅",
+    "reading": "うすこうばい",
+    "hex": "#e597b2",
+    "romaji": "usukoubai"
+  },
+  {
+    "id": "薄紫",
+    "reading": "うすむらさき",
+    "hex": "#c4a3bf",
+    "romaji": "usumurasaki"
+  },
+  {
+    "id": "薄香",
+    "reading": "うすこう",
+    "hex": "#f0cfa0",
+    "romaji": "usukou"
+  },
+  {
+    "id": "山吹",
+    "reading": "やまぶき",
+    "hex": "#f8b500",
+    "romaji": "yamabuki"
+  },
+  {
+    "id": "薄青",
+    "reading": "うすあお",
+    "hex": "#93b69c",
+    "romaji": "usuao"
+  },
+  {
+    "id": "薄蘇芳",
+    "reading": "うすすおう",
+    "hex": "#a25768",
+    "romaji": "ususuou"
+  },
+  {
+    "id": "薄萌黄",
+    "reading": "うすもえぎ",
+    "hex": "#badcad",
+    "romaji": "usumoegi"
+  },
+  {
+    "id": "濃赤",
+    "reading": "こきあか",
+    "hex": "#a80d2a",
+    "romaji": "kokiaka"
+  },
+  {
+    "id": "濃青",
+    "reading": "こきあお",
+    "hex": "#264a2e",
+    "romaji": "kokiao"
+  },
+  {
+    "id": "濃黄",
+    "reading": "こきき",
+    "hex": "#edb918",
+    "romaji": "kokiki"
+  },
+  {
+    "id": "濃紅",
+    "reading": "こきくれない",
+    "hex": "#b40926",
+    "romaji": "kokikurenai"
+  },
+  {
+    "id": "濃紅梅",
+    "reading": "こきこうばい",
+    "hex": "#491022",
+    "romaji": "kokikoubai"
+  },
+  {
+    "id": "濃香",
+    "reading": "こきこう",
+    "hex": "#9e5c46",
+    "romaji": "kokikou"
+  },
+  {
+    "id": "濃蘇芳",
+    "reading": "こきすおう",
+    "hex": "#491022",
+    "romaji": "kokisuou"
+  },
+  {
+    "id": "濃萌黄",
+    "reading": "こきもえぎ",
+    "hex": "#32540a",
+    "romaji": "kokimoegi"
+  },
+  {
+    "id": "濃二藍",
+    "reading": "こきふたあい",
+    "hex": "#644a77",
+    "romaji": "kokifutaai"
+  },
+  {
+    "id": "浅紅",
+    "reading": "あさきくれない",
+    "hex": "#f3a0aa",
+    "romaji": "asakikurenai"
+  },
+  {
+    "id": "青黒味",
+    "reading": "あおぐろみ",
+    "hex": "#384e1e",
+    "romaji": "aoguromi"
+  },
+  {
+    "id": "紅×黄",
+    "reading": "くれないとき",
+    "hex": "#e47c23",
+    "romaji": "kurenaitoki"
+  },
+  {
+    "id": "青×黄",
+    "reading": "あおとき",
+    "hex": "#96a22a",
+    "romaji": "aotoki"
+  },
+  {
+    "id": "桜花",
+    "reading": "さくらばな",
+    "hex": "#fcbec2",
+    "romaji": "sakurabana"
+  },
+  {
+    "id": "濃縹",
+    "reading": "こきはなだ",
+    "hex": "#2a4073",
+    "romaji": "kokihanada"
+  },
+  {
+    "id": "薄縹",
+    "reading": "うすはなだ",
+    "hex": "#507ea4",
+    "romaji": "usuhanada"
+  },
+  {
+    "id": "葡萄",
+    "reading": "えび",
+    "hex": "#6e1e51",
+    "romaji": "ebi"
+  }
+]

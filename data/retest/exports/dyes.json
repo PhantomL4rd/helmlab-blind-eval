@@ -1,0 +1,1069 @@
+[
+  {
+    "id": "dye_002",
+    "name": "Snow White",
+    "hex": "#e4dfd0",
+    "rgb": {
+      "r": 228,
+      "g": 223,
+      "b": 208
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_003",
+    "name": "Ash Grey",
+    "hex": "#aca8a2",
+    "rgb": {
+      "r": 172,
+      "g": 168,
+      "b": 162
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_004",
+    "name": "Goobbue Grey",
+    "hex": "#898784",
+    "rgb": {
+      "r": 137,
+      "g": 135,
+      "b": 132
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_005",
+    "name": "Slate Grey",
+    "hex": "#656565",
+    "rgb": {
+      "r": 101,
+      "g": 101,
+      "b": 101
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_006",
+    "name": "Charcoal Grey",
+    "hex": "#484742",
+    "rgb": {
+      "r": 72,
+      "g": 71,
+      "b": 66
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_007",
+    "name": "Soot Black",
+    "hex": "#2b2923",
+    "rgb": {
+      "r": 43,
+      "g": 41,
+      "b": 35
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_008",
+    "name": "Rose Pink",
+    "hex": "#e69f96",
+    "rgb": {
+      "r": 230,
+      "g": 159,
+      "b": 150
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_009",
+    "name": "Lilac Purple",
+    "hex": "#836969",
+    "rgb": {
+      "r": 131,
+      "g": 105,
+      "b": 105
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_010",
+    "name": "Rolanberry Red",
+    "hex": "#5b1729",
+    "rgb": {
+      "r": 91,
+      "g": 23,
+      "b": 41
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_011",
+    "name": "Dalamud Red",
+    "hex": "#781a1a",
+    "rgb": {
+      "r": 120,
+      "g": 26,
+      "b": 26
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_012",
+    "name": "Rust Red",
+    "hex": "#622207",
+    "rgb": {
+      "r": 98,
+      "g": 34,
+      "b": 7
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_013",
+    "name": "Wine Red",
+    "hex": "#451511",
+    "rgb": {
+      "r": 69,
+      "g": 21,
+      "b": 17
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_014",
+    "name": "Coral Pink",
+    "hex": "#cc6c5e",
+    "rgb": {
+      "r": 204,
+      "g": 108,
+      "b": 94
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_015",
+    "name": "Blood Red",
+    "hex": "#913b27",
+    "rgb": {
+      "r": 145,
+      "g": 59,
+      "b": 39
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_016",
+    "name": "Salmon Pink",
+    "hex": "#e4aa8a",
+    "rgb": {
+      "r": 228,
+      "g": 170,
+      "b": 138
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_019",
+    "name": "Sunset Orange",
+    "hex": "#b75c2d",
+    "rgb": {
+      "r": 183,
+      "g": 92,
+      "b": 45
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_020",
+    "name": "Mesa Red",
+    "hex": "#7d3906",
+    "rgb": {
+      "r": 125,
+      "g": 57,
+      "b": 6
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_021",
+    "name": "Bark Brown",
+    "hex": "#6a4b37",
+    "rgb": {
+      "r": 106,
+      "g": 75,
+      "b": 55
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_022",
+    "name": "Chocolate Brown",
+    "hex": "#6e3d24",
+    "rgb": {
+      "r": 110,
+      "g": 61,
+      "b": 36
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_023",
+    "name": "Russet Brown",
+    "hex": "#4f2d1f",
+    "rgb": {
+      "r": 79,
+      "g": 45,
+      "b": 31
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_024",
+    "name": "Kobold Brown",
+    "hex": "#30211b",
+    "rgb": {
+      "r": 48,
+      "g": 33,
+      "b": 27
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_025",
+    "name": "Cork Brown",
+    "hex": "#c99156",
+    "rgb": {
+      "r": 201,
+      "g": 145,
+      "b": 86
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_026",
+    "name": "Qiqirn Brown",
+    "hex": "#996e3f",
+    "rgb": {
+      "r": 153,
+      "g": 110,
+      "b": 63
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_027",
+    "name": "Opo-opo Brown",
+    "hex": "#7b5c2d",
+    "rgb": {
+      "r": 123,
+      "g": 92,
+      "b": 45
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_028",
+    "name": "Aldgoat Brown",
+    "hex": "#a2875c",
+    "rgb": {
+      "r": 162,
+      "g": 135,
+      "b": 92
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_029",
+    "name": "Pumpkin Orange",
+    "hex": "#c57424",
+    "rgb": {
+      "r": 197,
+      "g": 116,
+      "b": 36
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_030",
+    "name": "Acorn Brown",
+    "hex": "#8e581b",
+    "rgb": {
+      "r": 142,
+      "g": 88,
+      "b": 27
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_031",
+    "name": "Orchard Brown",
+    "hex": "#644216",
+    "rgb": {
+      "r": 100,
+      "g": 66,
+      "b": 22
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_032",
+    "name": "Chestnut Brown",
+    "hex": "#3d290d",
+    "rgb": {
+      "r": 61,
+      "g": 41,
+      "b": 13
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_033",
+    "name": "Gobbiebag Brown",
+    "hex": "#b9a489",
+    "rgb": {
+      "r": 185,
+      "g": 164,
+      "b": 137
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_034",
+    "name": "Shale Brown",
+    "hex": "#92816c",
+    "rgb": {
+      "r": 146,
+      "g": 129,
+      "b": 108
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_035",
+    "name": "Mole Brown",
+    "hex": "#615245",
+    "rgb": {
+      "r": 97,
+      "g": 82,
+      "b": 69
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_036",
+    "name": "Loam Brown",
+    "hex": "#3f3329",
+    "rgb": {
+      "r": 63,
+      "g": 51,
+      "b": 41
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_037",
+    "name": "Bone White",
+    "hex": "#ebd3a0",
+    "rgb": {
+      "r": 235,
+      "g": 211,
+      "b": 160
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_038",
+    "name": "Ul Brown",
+    "hex": "#b7a370",
+    "rgb": {
+      "r": 183,
+      "g": 163,
+      "b": 112
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_039",
+    "name": "Desert Yellow",
+    "hex": "#dbb457",
+    "rgb": {
+      "r": 219,
+      "g": 180,
+      "b": 87
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_040",
+    "name": "Honey Yellow",
+    "hex": "#fac62b",
+    "rgb": {
+      "r": 250,
+      "g": 198,
+      "b": 43
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_041",
+    "name": "Millioncorn Yellow",
+    "hex": "#e49e34",
+    "rgb": {
+      "r": 228,
+      "g": 158,
+      "b": 52
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_042",
+    "name": "Coeurl Yellow",
+    "hex": "#bc8804",
+    "rgb": {
+      "r": 188,
+      "g": 136,
+      "b": 4
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_043",
+    "name": "Cream Yellow",
+    "hex": "#f2d770",
+    "rgb": {
+      "r": 242,
+      "g": 215,
+      "b": 112
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_044",
+    "name": "Halatali Yellow",
+    "hex": "#a58430",
+    "rgb": {
+      "r": 165,
+      "g": 132,
+      "b": 48
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_045",
+    "name": "Raisin Brown",
+    "hex": "#403311",
+    "rgb": {
+      "r": 64,
+      "g": 51,
+      "b": 17
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_047",
+    "name": "Vanilla Yellow",
+    "hex": "#fbf1b4",
+    "rgb": {
+      "r": 251,
+      "g": 241,
+      "b": 180
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_048",
+    "name": "Mud Green",
+    "hex": "#585230",
+    "rgb": {
+      "r": 88,
+      "g": 82,
+      "b": 48
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_049",
+    "name": "Sylph Green",
+    "hex": "#bbbb8a",
+    "rgb": {
+      "r": 187,
+      "g": 187,
+      "b": 138
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_050",
+    "name": "Lime Green",
+    "hex": "#abb054",
+    "rgb": {
+      "r": 171,
+      "g": 176,
+      "b": 84
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_051",
+    "name": "Moss Green",
+    "hex": "#707326",
+    "rgb": {
+      "r": 112,
+      "g": 115,
+      "b": 38
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_052",
+    "name": "Meadow Green",
+    "hex": "#8b9c63",
+    "rgb": {
+      "r": 139,
+      "g": 156,
+      "b": 99
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_053",
+    "name": "Olive Green",
+    "hex": "#4b5232",
+    "rgb": {
+      "r": 75,
+      "g": 82,
+      "b": 50
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_054",
+    "name": "Marsh Green",
+    "hex": "#323621",
+    "rgb": {
+      "r": 50,
+      "g": 54,
+      "b": 33
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_055",
+    "name": "Apple Green",
+    "hex": "#9bb363",
+    "rgb": {
+      "r": 155,
+      "g": 179,
+      "b": 99
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_056",
+    "name": "Cactuar Green",
+    "hex": "#658241",
+    "rgb": {
+      "r": 101,
+      "g": 130,
+      "b": 65
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_057",
+    "name": "Hunter Green",
+    "hex": "#284b2c",
+    "rgb": {
+      "r": 40,
+      "g": 75,
+      "b": 44
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_058",
+    "name": "Ochu Green",
+    "hex": "#406339",
+    "rgb": {
+      "r": 64,
+      "g": 99,
+      "b": 57
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_059",
+    "name": "Adamantoise Green",
+    "hex": "#5f7558",
+    "rgb": {
+      "r": 95,
+      "g": 117,
+      "b": 88
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_060",
+    "name": "Nophica Green",
+    "hex": "#3b4d3c",
+    "rgb": {
+      "r": 59,
+      "g": 77,
+      "b": 60
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_061",
+    "name": "Deepwood Green",
+    "hex": "#1e2a21",
+    "rgb": {
+      "r": 30,
+      "g": 42,
+      "b": 33
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_062",
+    "name": "Celeste Green",
+    "hex": "#96bdb9",
+    "rgb": {
+      "r": 150,
+      "g": 189,
+      "b": 185
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_063",
+    "name": "Turquoise Green",
+    "hex": "#437272",
+    "rgb": {
+      "r": 67,
+      "g": 114,
+      "b": 114
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_064",
+    "name": "Morbol Green",
+    "hex": "#1f4646",
+    "rgb": {
+      "r": 31,
+      "g": 70,
+      "b": 70
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_065",
+    "name": "Ice Blue",
+    "hex": "#b2c4ce",
+    "rgb": {
+      "r": 178,
+      "g": 196,
+      "b": 206
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_066",
+    "name": "Sky Blue",
+    "hex": "#83b0d2",
+    "rgb": {
+      "r": 131,
+      "g": 176,
+      "b": 210
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_067",
+    "name": "Seafog Blue",
+    "hex": "#6481a0",
+    "rgb": {
+      "r": 100,
+      "g": 129,
+      "b": 160
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_068",
+    "name": "Peacock Blue",
+    "hex": "#3b6886",
+    "rgb": {
+      "r": 59,
+      "g": 104,
+      "b": 134
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_069",
+    "name": "Rhotano Blue",
+    "hex": "#1c3d54",
+    "rgb": {
+      "r": 28,
+      "g": 61,
+      "b": 84
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_070",
+    "name": "Corpse Blue",
+    "hex": "#8e9bac",
+    "rgb": {
+      "r": 142,
+      "g": 155,
+      "b": 172
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_071",
+    "name": "Ceruleum Blue",
+    "hex": "#4f5766",
+    "rgb": {
+      "r": 79,
+      "g": 87,
+      "b": 102
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_072",
+    "name": "Woad Blue",
+    "hex": "#2f3851",
+    "rgb": {
+      "r": 47,
+      "g": 56,
+      "b": 81
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_073",
+    "name": "Ink Blue",
+    "hex": "#1a1f27",
+    "rgb": {
+      "r": 26,
+      "g": 31,
+      "b": 39
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_074",
+    "name": "Raptor Blue",
+    "hex": "#5b7fc0",
+    "rgb": {
+      "r": 91,
+      "g": 127,
+      "b": 192
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_075",
+    "name": "Othard Blue",
+    "hex": "#2f5889",
+    "rgb": {
+      "r": 47,
+      "g": 88,
+      "b": 137
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_076",
+    "name": "Storm Blue",
+    "hex": "#234172",
+    "rgb": {
+      "r": 35,
+      "g": 65,
+      "b": 114
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_077",
+    "name": "Void Blue",
+    "hex": "#112944",
+    "rgb": {
+      "r": 17,
+      "g": 41,
+      "b": 68
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_078",
+    "name": "Royal Blue",
+    "hex": "#273067",
+    "rgb": {
+      "r": 39,
+      "g": 48,
+      "b": 103
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_079",
+    "name": "Midnight Blue",
+    "hex": "#181937",
+    "rgb": {
+      "r": 24,
+      "g": 25,
+      "b": 55
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_080",
+    "name": "Shadow Blue",
+    "hex": "#373747",
+    "rgb": {
+      "r": 55,
+      "g": 55,
+      "b": 71
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_081",
+    "name": "Abyssal Blue",
+    "hex": "#312d57",
+    "rgb": {
+      "r": 49,
+      "g": 45,
+      "b": 87
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_084",
+    "name": "Lavender Purple",
+    "hex": "#877fae",
+    "rgb": {
+      "r": 135,
+      "g": 127,
+      "b": 174
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_085",
+    "name": "Gloom Purple",
+    "hex": "#514560",
+    "rgb": {
+      "r": 81,
+      "g": 69,
+      "b": 96
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_086",
+    "name": "Currant Purple",
+    "hex": "#322c3b",
+    "rgb": {
+      "r": 50,
+      "g": 44,
+      "b": 59
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_087",
+    "name": "Iris Purple",
+    "hex": "#b79ebc",
+    "rgb": {
+      "r": 183,
+      "g": 158,
+      "b": 188
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_088",
+    "name": "Grape Purple",
+    "hex": "#3b2a3d",
+    "rgb": {
+      "r": 59,
+      "g": 42,
+      "b": 61
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_089",
+    "name": "Lotus Pink",
+    "hex": "#fecef5",
+    "rgb": {
+      "r": 254,
+      "g": 206,
+      "b": 245
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_090",
+    "name": "Colibri Pink",
+    "hex": "#dc9bca",
+    "rgb": {
+      "r": 220,
+      "g": 155,
+      "b": 202
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_091",
+    "name": "Plum Purple",
+    "hex": "#79526c",
+    "rgb": {
+      "r": 121,
+      "g": 82,
+      "b": 108
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_092",
+    "name": "Regal Purple",
+    "hex": "#66304e",
+    "rgb": {
+      "r": 102,
+      "g": 48,
+      "b": 78
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_093",
+    "name": "Pure White",
+    "hex": "#f9f8f4",
+    "rgb": {
+      "r": 249,
+      "g": 248,
+      "b": 244
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_094",
+    "name": "Jet Black",
+    "hex": "#1e1e1e",
+    "rgb": {
+      "r": 30,
+      "g": 30,
+      "b": 30
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_095",
+    "name": "Pastel Pink",
+    "hex": "#fdc8c6",
+    "rgb": {
+      "r": 253,
+      "g": 200,
+      "b": 198
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_096",
+    "name": "Dark Red",
+    "hex": "#321919",
+    "rgb": {
+      "r": 50,
+      "g": 25,
+      "b": 25
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_097",
+    "name": "Dark Brown",
+    "hex": "#28211c",
+    "rgb": {
+      "r": 40,
+      "g": 33,
+      "b": 28
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_098",
+    "name": "Pastel Green",
+    "hex": "#bacfaa",
+    "rgb": {
+      "r": 186,
+      "g": 207,
+      "b": 170
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_099",
+    "name": "Dark Green",
+    "hex": "#152c2c",
+    "rgb": {
+      "r": 21,
+      "g": 44,
+      "b": 44
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_100",
+    "name": "Pastel Blue",
+    "hex": "#96a4d9",
+    "rgb": {
+      "r": 150,
+      "g": 164,
+      "b": 217
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_101",
+    "name": "Dark Blue",
+    "hex": "#121f2d",
+    "rgb": {
+      "r": 18,
+      "g": 31,
+      "b": 45
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_102",
+    "name": "Pastel Purple",
+    "hex": "#bbb5da",
+    "rgb": {
+      "r": 187,
+      "g": 181,
+      "b": 218
+    },
+    "tags": []
+  },
+  {
+    "id": "dye_103",
+    "name": "Dark Purple",
+    "hex": "#232026",
+    "rgb": {
+      "r": 35,
+      "g": 32,
+      "b": 38
+    },
+    "tags": []
+  }
+]

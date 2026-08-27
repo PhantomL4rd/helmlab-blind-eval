@@ -1,0 +1,2971 @@
+[
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "紺青",
+    "targetHex": "#192f60",
+    "shortlistedDyeHexes": [
+      "#1c3d54",
+      "#2f5889",
+      "#112944",
+      "#234172"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#1c3d54",
+        "action": "add",
+        "at": "2026-08-27T08:24:56.348Z"
+      },
+      {
+        "hex": "#2f5889",
+        "action": "add",
+        "at": "2026-08-27T08:24:58.714Z"
+      },
+      {
+        "hex": "#112944",
+        "action": "add",
+        "at": "2026-08-27T08:25:02.947Z"
+      },
+      {
+        "hex": "#234172",
+        "action": "add",
+        "at": "2026-08-27T08:25:06.566Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#234172",
+      "#112944",
+      "#1c3d54",
+      "#2f5889"
+    ],
+    "selectedDyeHex": "#234172",
+    "selectionHistory": [
+      {
+        "hex": "#234172",
+        "at": "2026-08-27T08:25:16.781Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:24:52.147Z",
+    "phase1CompletedAt": "2026-08-27T08:25:10.664Z",
+    "phase2StartedAt": "2026-08-27T08:25:10.664Z",
+    "completedAt": "2026-08-27T08:25:19.232Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃薄色",
+    "targetHex": "#795083",
+    "shortlistedDyeHexes": [
+      "#877fae",
+      "#514560",
+      "#b79ebc",
+      "#79526c"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#877fae",
+        "action": "add",
+        "at": "2026-08-27T08:25:25.798Z"
+      },
+      {
+        "hex": "#514560",
+        "action": "add",
+        "at": "2026-08-27T08:25:26.640Z"
+      },
+      {
+        "hex": "#b79ebc",
+        "action": "add",
+        "at": "2026-08-27T08:25:31.016Z"
+      },
+      {
+        "hex": "#79526c",
+        "action": "add",
+        "at": "2026-08-27T08:25:31.848Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#514560",
+      "#b79ebc",
+      "#877fae",
+      "#79526c"
+    ],
+    "selectedDyeHex": "#79526c",
+    "selectionHistory": [
+      {
+        "hex": "#79526c",
+        "at": "2026-08-27T08:25:39.415Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:25:20.899Z",
+    "phase1CompletedAt": "2026-08-27T08:25:32.564Z",
+    "phase2StartedAt": "2026-08-27T08:25:32.564Z",
+    "completedAt": "2026-08-27T08:25:41.898Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "赤",
+    "targetHex": "#ec001a",
+    "shortlistedDyeHexes": [
+      "#781a1a",
+      "#cc6c5e",
+      "#913b27",
+      "#622207"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#781a1a",
+        "action": "add",
+        "at": "2026-08-27T08:25:45.531Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:25:49.998Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:25:50.531Z"
+      },
+      {
+        "hex": "#622207",
+        "action": "add",
+        "at": "2026-08-27T08:25:52.815Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#622207",
+      "#913b27",
+      "#cc6c5e",
+      "#781a1a"
+    ],
+    "selectedDyeHex": "#781a1a",
+    "selectionHistory": [
+      {
+        "hex": "#781a1a",
+        "at": "2026-08-27T08:25:57.849Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "low",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:25:42.765Z",
+    "phase1CompletedAt": "2026-08-27T08:25:53.815Z",
+    "phase2StartedAt": "2026-08-27T08:25:53.815Z",
+    "completedAt": "2026-08-27T08:25:58.849Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "浅紫",
+    "targetHex": "#c4a3bf",
+    "shortlistedDyeHexes": [
+      "#bbb5da",
+      "#877fae",
+      "#b79ebc",
+      "#fecef5",
+      "#dc9bca",
+      "#79526c"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#bbb5da",
+        "action": "add",
+        "at": "2026-08-27T08:26:21.815Z"
+      },
+      {
+        "hex": "#877fae",
+        "action": "add",
+        "at": "2026-08-27T08:26:22.549Z"
+      },
+      {
+        "hex": "#b79ebc",
+        "action": "add",
+        "at": "2026-08-27T08:26:24.498Z"
+      },
+      {
+        "hex": "#fecef5",
+        "action": "add",
+        "at": "2026-08-27T08:26:25.465Z"
+      },
+      {
+        "hex": "#dc9bca",
+        "action": "add",
+        "at": "2026-08-27T08:26:25.982Z"
+      },
+      {
+        "hex": "#79526c",
+        "action": "add",
+        "at": "2026-08-27T08:26:26.498Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#877fae",
+      "#dc9bca",
+      "#b79ebc",
+      "#bbb5da",
+      "#79526c",
+      "#fecef5"
+    ],
+    "selectedDyeHex": "#b79ebc",
+    "selectionHistory": [
+      {
+        "hex": "#b79ebc",
+        "at": "2026-08-27T08:26:31.115Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:26:19.049Z",
+    "phase1CompletedAt": "2026-08-27T08:26:27.182Z",
+    "phase2StartedAt": "2026-08-27T08:26:27.182Z",
+    "completedAt": "2026-08-27T08:26:32.015Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃紅梅",
+    "targetHex": "#491022",
+    "shortlistedDyeHexes": [
+      "#781a1a",
+      "#913b27",
+      "#622207",
+      "#b75c2d",
+      "#7d3906"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#781a1a",
+        "action": "add",
+        "at": "2026-08-27T08:26:52.782Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:26:55.282Z"
+      },
+      {
+        "hex": "#622207",
+        "action": "add",
+        "at": "2026-08-27T08:26:56.349Z"
+      },
+      {
+        "hex": "#b75c2d",
+        "action": "add",
+        "at": "2026-08-27T08:26:56.965Z"
+      },
+      {
+        "hex": "#7d3906",
+        "action": "add",
+        "at": "2026-08-27T08:26:58.282Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#913b27",
+      "#781a1a",
+      "#622207",
+      "#7d3906",
+      "#b75c2d"
+    ],
+    "selectedDyeHex": "#781a1a",
+    "selectionHistory": [
+      {
+        "hex": "#781a1a",
+        "at": "2026-08-27T08:27:11.082Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:26:50.349Z",
+    "phase1CompletedAt": "2026-08-27T08:27:00.049Z",
+    "phase2StartedAt": "2026-08-27T08:27:00.049Z",
+    "completedAt": "2026-08-27T08:27:12.316Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄紅梅",
+    "targetHex": "#e597b2",
+    "shortlistedDyeHexes": [
+      "#fdc8c6",
+      "#e69f96",
+      "#cc6c5e",
+      "#fecef5",
+      "#dc9bca"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fdc8c6",
+        "action": "add",
+        "at": "2026-08-27T08:27:15.466Z"
+      },
+      {
+        "hex": "#e69f96",
+        "action": "add",
+        "at": "2026-08-27T08:27:16.249Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:27:16.699Z"
+      },
+      {
+        "hex": "#fecef5",
+        "action": "add",
+        "at": "2026-08-27T08:27:18.249Z"
+      },
+      {
+        "hex": "#dc9bca",
+        "action": "add",
+        "at": "2026-08-27T08:27:18.666Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#e69f96",
+      "#cc6c5e",
+      "#fecef5",
+      "#fdc8c6",
+      "#dc9bca"
+    ],
+    "selectedDyeHex": "#dc9bca",
+    "selectionHistory": [
+      {
+        "hex": "#dc9bca",
+        "at": "2026-08-27T08:27:23.099Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:27:13.432Z",
+    "phase1CompletedAt": "2026-08-27T08:27:19.300Z",
+    "phase2StartedAt": "2026-08-27T08:27:19.300Z",
+    "completedAt": "2026-08-27T08:27:26.583Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "淡青",
+    "targetHex": "#29905e",
+    "shortlistedDyeHexes": [
+      "#437272",
+      "#707326",
+      "#658241",
+      "#406339",
+      "#5f7558"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#437272",
+        "action": "add",
+        "at": "2026-08-27T08:28:04.183Z"
+      },
+      {
+        "hex": "#707326",
+        "action": "add",
+        "at": "2026-08-27T08:28:05.233Z"
+      },
+      {
+        "hex": "#658241",
+        "action": "add",
+        "at": "2026-08-27T08:28:06.633Z"
+      },
+      {
+        "hex": "#406339",
+        "action": "add",
+        "at": "2026-08-27T08:28:07.567Z"
+      },
+      {
+        "hex": "#5f7558",
+        "action": "add",
+        "at": "2026-08-27T08:28:08.100Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#707326",
+      "#5f7558",
+      "#437272",
+      "#658241",
+      "#406339"
+    ],
+    "selectedDyeHex": "#406339",
+    "selectionHistory": [
+      {
+        "hex": "#406339",
+        "at": "2026-08-27T08:28:16.350Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:28:00.466Z",
+    "phase1CompletedAt": "2026-08-27T08:28:10.116Z",
+    "phase2StartedAt": "2026-08-27T08:28:10.116Z",
+    "completedAt": "2026-08-27T08:28:17.350Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "浅紅",
+    "targetHex": "#f3a0aa",
+    "shortlistedDyeHexes": [
+      "#fdc8c6",
+      "#e69f96",
+      "#cc6c5e",
+      "#913b27",
+      "#fecef5",
+      "#dc9bca"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fdc8c6",
+        "action": "add",
+        "at": "2026-08-27T08:29:24.134Z"
+      },
+      {
+        "hex": "#e69f96",
+        "action": "add",
+        "at": "2026-08-27T08:29:24.717Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:29:25.134Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:29:25.751Z"
+      },
+      {
+        "hex": "#fecef5",
+        "action": "add",
+        "at": "2026-08-27T08:29:27.534Z"
+      },
+      {
+        "hex": "#dc9bca",
+        "action": "add",
+        "at": "2026-08-27T08:29:28.000Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#dc9bca",
+      "#913b27",
+      "#e69f96",
+      "#cc6c5e",
+      "#fecef5",
+      "#fdc8c6"
+    ],
+    "selectedDyeHex": "#fdc8c6",
+    "selectionHistory": [
+      {
+        "hex": "#fdc8c6",
+        "at": "2026-08-27T08:29:36.634Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:29:21.834Z",
+    "phase1CompletedAt": "2026-08-27T08:29:28.517Z",
+    "phase2StartedAt": "2026-08-27T08:29:28.517Z",
+    "completedAt": "2026-08-27T08:29:37.851Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "淡蘇芳",
+    "targetHex": "#871c40",
+    "shortlistedDyeHexes": [
+      "#781a1a",
+      "#451511",
+      "#913b27",
+      "#622207",
+      "#b75c2d"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#781a1a",
+        "action": "add",
+        "at": "2026-08-27T08:29:40.218Z"
+      },
+      {
+        "hex": "#451511",
+        "action": "add",
+        "at": "2026-08-27T08:29:41.351Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:29:42.251Z"
+      },
+      {
+        "hex": "#622207",
+        "action": "add",
+        "at": "2026-08-27T08:29:43.201Z"
+      },
+      {
+        "hex": "#b75c2d",
+        "action": "add",
+        "at": "2026-08-27T08:29:43.884Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#913b27",
+      "#451511",
+      "#622207",
+      "#781a1a",
+      "#b75c2d"
+    ],
+    "selectedDyeHex": "#781a1a",
+    "selectionHistory": [
+      {
+        "hex": "#781a1a",
+        "at": "2026-08-27T08:29:49.917Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:29:38.617Z",
+    "phase1CompletedAt": "2026-08-27T08:29:44.901Z",
+    "phase2StartedAt": "2026-08-27T08:29:44.901Z",
+    "completedAt": "2026-08-27T08:29:51.001Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃朽葉",
+    "targetHex": "#e07400",
+    "shortlistedDyeHexes": [
+      "#c57424",
+      "#c99156",
+      "#e49e34",
+      "#dbb457",
+      "#bc8804"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#c57424",
+        "action": "add",
+        "at": "2026-08-27T08:29:59.534Z"
+      },
+      {
+        "hex": "#c99156",
+        "action": "add",
+        "at": "2026-08-27T08:30:00.152Z"
+      },
+      {
+        "hex": "#e49e34",
+        "action": "add",
+        "at": "2026-08-27T08:30:02.251Z"
+      },
+      {
+        "hex": "#dbb457",
+        "action": "add",
+        "at": "2026-08-27T08:30:05.418Z"
+      },
+      {
+        "hex": "#bc8804",
+        "action": "add",
+        "at": "2026-08-27T08:30:05.801Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#c99156",
+      "#e49e34",
+      "#bc8804",
+      "#c57424",
+      "#dbb457"
+    ],
+    "selectedDyeHex": "#c57424",
+    "selectionHistory": [
+      {
+        "hex": "#c57424",
+        "at": "2026-08-27T08:30:11.501Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:29:51.967Z",
+    "phase1CompletedAt": "2026-08-27T08:30:06.668Z",
+    "phase2StartedAt": "2026-08-27T08:30:06.668Z",
+    "completedAt": "2026-08-27T08:30:13.351Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "青黒味",
+    "targetHex": "#384e1e",
+    "shortlistedDyeHexes": [
+      "#323621",
+      "#4b5232",
+      "#5f7558",
+      "#406339",
+      "#1f4646"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#323621",
+        "action": "add",
+        "at": "2026-08-27T08:30:17.201Z"
+      },
+      {
+        "hex": "#4b5232",
+        "action": "add",
+        "at": "2026-08-27T08:30:17.618Z"
+      },
+      {
+        "hex": "#5f7558",
+        "action": "add",
+        "at": "2026-08-27T08:30:19.068Z"
+      },
+      {
+        "hex": "#406339",
+        "action": "add",
+        "at": "2026-08-27T08:30:19.568Z"
+      },
+      {
+        "hex": "#1f4646",
+        "action": "add",
+        "at": "2026-08-27T08:30:21.234Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#406339",
+      "#1f4646",
+      "#4b5232",
+      "#5f7558",
+      "#323621"
+    ],
+    "selectedDyeHex": "#406339",
+    "selectionHistory": [
+      {
+        "hex": "#406339",
+        "at": "2026-08-27T08:30:24.868Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:30:14.184Z",
+    "phase1CompletedAt": "2026-08-27T08:30:22.351Z",
+    "phase2StartedAt": "2026-08-27T08:30:22.351Z",
+    "completedAt": "2026-08-27T08:30:25.668Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "淡木賊",
+    "targetHex": "#467852",
+    "shortlistedDyeHexes": [
+      "#284b2c",
+      "#3b4d3c",
+      "#406339",
+      "#5f7558"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#284b2c",
+        "action": "add",
+        "at": "2026-08-27T08:30:57.418Z"
+      },
+      {
+        "hex": "#3b4d3c",
+        "action": "add",
+        "at": "2026-08-27T08:30:58.352Z"
+      },
+      {
+        "hex": "#406339",
+        "action": "add",
+        "at": "2026-08-27T08:30:59.068Z"
+      },
+      {
+        "hex": "#5f7558",
+        "action": "add",
+        "at": "2026-08-27T08:31:02.635Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#284b2c",
+      "#5f7558",
+      "#406339",
+      "#3b4d3c"
+    ],
+    "selectedDyeHex": "#406339",
+    "selectionHistory": [
+      {
+        "hex": "#406339",
+        "at": "2026-08-27T08:31:11.318Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:30:48.968Z",
+    "phase1CompletedAt": "2026-08-27T08:31:03.518Z",
+    "phase2StartedAt": "2026-08-27T08:31:03.518Z",
+    "completedAt": "2026-08-27T08:31:12.436Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃紅",
+    "targetHex": "#b40926",
+    "shortlistedDyeHexes": [
+      "#913b27",
+      "#622207",
+      "#b75c2d",
+      "#781a1a"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:31:33.969Z"
+      },
+      {
+        "hex": "#622207",
+        "action": "add",
+        "at": "2026-08-27T08:31:35.002Z"
+      },
+      {
+        "hex": "#b75c2d",
+        "action": "add",
+        "at": "2026-08-27T08:31:35.819Z"
+      },
+      {
+        "hex": "#781a1a",
+        "action": "add",
+        "at": "2026-08-27T08:31:36.869Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#781a1a",
+      "#b75c2d",
+      "#622207",
+      "#913b27"
+    ],
+    "selectedDyeHex": "#781a1a",
+    "selectionHistory": [
+      {
+        "hex": "#781a1a",
+        "at": "2026-08-27T08:31:51.419Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:31:32.102Z",
+    "phase1CompletedAt": "2026-08-27T08:31:47.753Z",
+    "phase2StartedAt": "2026-08-27T08:31:47.753Z",
+    "completedAt": "2026-08-27T08:31:54.686Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄紫",
+    "targetHex": "#c4a3bf",
+    "shortlistedDyeHexes": [
+      "#b79ebc",
+      "#fecef5",
+      "#dc9bca",
+      "#bbb5da",
+      "#877fae"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#b79ebc",
+        "action": "add",
+        "at": "2026-08-27T08:32:39.770Z"
+      },
+      {
+        "hex": "#fecef5",
+        "action": "add",
+        "at": "2026-08-27T08:32:40.486Z"
+      },
+      {
+        "hex": "#dc9bca",
+        "action": "add",
+        "at": "2026-08-27T08:32:40.886Z"
+      },
+      {
+        "hex": "#bbb5da",
+        "action": "add",
+        "at": "2026-08-27T08:32:41.719Z"
+      },
+      {
+        "hex": "#877fae",
+        "action": "add",
+        "at": "2026-08-27T08:32:42.086Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#dc9bca",
+      "#877fae",
+      "#bbb5da",
+      "#b79ebc",
+      "#fecef5"
+    ],
+    "selectedDyeHex": "#b79ebc",
+    "selectionHistory": [
+      {
+        "hex": "#b79ebc",
+        "at": "2026-08-27T08:32:46.420Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:32:37.886Z",
+    "phase1CompletedAt": "2026-08-27T08:32:43.354Z",
+    "phase2StartedAt": "2026-08-27T08:32:43.354Z",
+    "completedAt": "2026-08-27T08:32:47.937Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃紫",
+    "targetHex": "#4d384d",
+    "shortlistedDyeHexes": [
+      "#514560",
+      "#322c3b",
+      "#79526c",
+      "#3b2a3d"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#514560",
+        "action": "add",
+        "at": "2026-08-27T08:32:51.353Z"
+      },
+      {
+        "hex": "#322c3b",
+        "action": "add",
+        "at": "2026-08-27T08:32:52.486Z"
+      },
+      {
+        "hex": "#79526c",
+        "action": "add",
+        "at": "2026-08-27T08:32:53.353Z"
+      },
+      {
+        "hex": "#3b2a3d",
+        "action": "add",
+        "at": "2026-08-27T08:32:54.136Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#322c3b",
+      "#79526c",
+      "#3b2a3d",
+      "#514560"
+    ],
+    "selectedDyeHex": "#3b2a3d",
+    "selectionHistory": [
+      {
+        "hex": "#3b2a3d",
+        "at": "2026-08-27T08:32:57.803Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:32:48.936Z",
+    "phase1CompletedAt": "2026-08-27T08:32:54.736Z",
+    "phase2StartedAt": "2026-08-27T08:32:54.736Z",
+    "completedAt": "2026-08-27T08:32:58.536Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄黄",
+    "targetHex": "#f6f193",
+    "shortlistedDyeHexes": [
+      "#fbf1b4",
+      "#ebd3a0",
+      "#dbb457",
+      "#fac62b",
+      "#f2d770"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fbf1b4",
+        "action": "add",
+        "at": "2026-08-27T08:33:02.870Z"
+      },
+      {
+        "hex": "#ebd3a0",
+        "action": "add",
+        "at": "2026-08-27T08:33:03.486Z"
+      },
+      {
+        "hex": "#dbb457",
+        "action": "add",
+        "at": "2026-08-27T08:33:03.853Z"
+      },
+      {
+        "hex": "#fac62b",
+        "action": "add",
+        "at": "2026-08-27T08:33:04.653Z"
+      },
+      {
+        "hex": "#f2d770",
+        "action": "add",
+        "at": "2026-08-27T08:33:05.203Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#fac62b",
+      "#dbb457",
+      "#ebd3a0",
+      "#f2d770",
+      "#fbf1b4"
+    ],
+    "selectedDyeHex": "#fbf1b4",
+    "selectionHistory": [
+      {
+        "hex": "#fbf1b4",
+        "at": "2026-08-27T08:33:13.136Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:32:59.853Z",
+    "phase1CompletedAt": "2026-08-27T08:33:06.003Z",
+    "phase2StartedAt": "2026-08-27T08:33:06.003Z",
+    "completedAt": "2026-08-27T08:33:14.537Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃萌黄",
+    "targetHex": "#32540a",
+    "shortlistedDyeHexes": [
+      "#284b2c",
+      "#406339",
+      "#4b5232",
+      "#707326"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#284b2c",
+        "action": "add",
+        "at": "2026-08-27T08:33:19.537Z"
+      },
+      {
+        "hex": "#406339",
+        "action": "add",
+        "at": "2026-08-27T08:33:21.087Z"
+      },
+      {
+        "hex": "#4b5232",
+        "action": "add",
+        "at": "2026-08-27T08:33:22.803Z"
+      },
+      {
+        "hex": "#707326",
+        "action": "add",
+        "at": "2026-08-27T08:33:23.937Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#4b5232",
+      "#707326",
+      "#406339",
+      "#284b2c"
+    ],
+    "selectedDyeHex": "#406339",
+    "selectionHistory": [
+      {
+        "hex": "#406339",
+        "at": "2026-08-27T08:33:29.987Z"
+      }
+    ],
+    "tiedHexes": [
+      "#406339"
+    ],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:33:15.487Z",
+    "phase1CompletedAt": "2026-08-27T08:33:24.903Z",
+    "phase2StartedAt": "2026-08-27T08:33:24.903Z",
+    "completedAt": "2026-08-27T08:33:48.904Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄紅",
+    "targetHex": "#f4b2ba",
+    "shortlistedDyeHexes": [
+      "#fdc8c6",
+      "#e69f96",
+      "#fecef5"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fdc8c6",
+        "action": "add",
+        "at": "2026-08-27T08:34:04.171Z"
+      },
+      {
+        "hex": "#e69f96",
+        "action": "add",
+        "at": "2026-08-27T08:34:04.770Z"
+      },
+      {
+        "hex": "#fecef5",
+        "action": "add",
+        "at": "2026-08-27T08:34:06.970Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#fdc8c6",
+      "#fecef5",
+      "#e69f96"
+    ],
+    "selectedDyeHex": "#fdc8c6",
+    "selectionHistory": [
+      {
+        "hex": "#fdc8c6",
+        "at": "2026-08-27T08:34:10.137Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:34:01.204Z",
+    "phase1CompletedAt": "2026-08-27T08:34:07.637Z",
+    "phase2StartedAt": "2026-08-27T08:34:07.637Z",
+    "completedAt": "2026-08-27T08:34:11.537Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄萌黄",
+    "targetHex": "#badcad",
+    "shortlistedDyeHexes": [
+      "#bacfaa",
+      "#abb054",
+      "#9bb363",
+      "#96bdb9"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#bacfaa",
+        "action": "add",
+        "at": "2026-08-27T08:34:16.004Z"
+      },
+      {
+        "hex": "#abb054",
+        "action": "add",
+        "at": "2026-08-27T08:34:17.204Z"
+      },
+      {
+        "hex": "#9bb363",
+        "action": "add",
+        "at": "2026-08-27T08:34:18.121Z"
+      },
+      {
+        "hex": "#96bdb9",
+        "action": "add",
+        "at": "2026-08-27T08:34:18.887Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#9bb363",
+      "#bacfaa",
+      "#abb054",
+      "#96bdb9"
+    ],
+    "selectedDyeHex": "#bacfaa",
+    "selectionHistory": [
+      {
+        "hex": "#bacfaa",
+        "at": "2026-08-27T08:34:22.371Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:34:12.954Z",
+    "phase1CompletedAt": "2026-08-27T08:34:20.037Z",
+    "phase2StartedAt": "2026-08-27T08:34:20.037Z",
+    "completedAt": "2026-08-27T08:34:23.787Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "淡紫",
+    "targetHex": "#874da1",
+    "shortlistedDyeHexes": [
+      "#877fae",
+      "#514560",
+      "#b79ebc",
+      "#79526c",
+      "#66304e"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#877fae",
+        "action": "add",
+        "at": "2026-08-27T08:34:30.537Z"
+      },
+      {
+        "hex": "#514560",
+        "action": "add",
+        "at": "2026-08-27T08:34:31.237Z"
+      },
+      {
+        "hex": "#b79ebc",
+        "action": "add",
+        "at": "2026-08-27T08:34:32.287Z"
+      },
+      {
+        "hex": "#79526c",
+        "action": "add",
+        "at": "2026-08-27T08:34:33.004Z"
+      },
+      {
+        "hex": "#66304e",
+        "action": "add",
+        "at": "2026-08-27T08:34:34.121Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#79526c",
+      "#514560",
+      "#66304e",
+      "#877fae",
+      "#b79ebc"
+    ],
+    "selectedDyeHex": "#877fae",
+    "selectionHistory": [
+      {
+        "hex": "#877fae",
+        "at": "2026-08-27T08:34:39.004Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:34:24.587Z",
+    "phase1CompletedAt": "2026-08-27T08:34:34.771Z",
+    "phase2StartedAt": "2026-08-27T08:34:34.771Z",
+    "completedAt": "2026-08-27T08:34:41.988Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄朽葉",
+    "targetHex": "#e8d3a2",
+    "shortlistedDyeHexes": [
+      "#b9a489",
+      "#ebd3a0",
+      "#a2875c",
+      "#b7a370"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#b9a489",
+        "action": "add",
+        "at": "2026-08-27T08:34:48.671Z"
+      },
+      {
+        "hex": "#ebd3a0",
+        "action": "add",
+        "at": "2026-08-27T08:34:49.488Z"
+      },
+      {
+        "hex": "#a2875c",
+        "action": "add",
+        "at": "2026-08-27T08:34:50.521Z"
+      },
+      {
+        "hex": "#b7a370",
+        "action": "add",
+        "at": "2026-08-27T08:34:51.371Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#b7a370",
+      "#b9a489",
+      "#ebd3a0",
+      "#a2875c"
+    ],
+    "selectedDyeHex": "#ebd3a0",
+    "selectionHistory": [
+      {
+        "hex": "#ebd3a0",
+        "at": "2026-08-27T08:34:56.705Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:34:43.154Z",
+    "phase1CompletedAt": "2026-08-27T08:34:54.738Z",
+    "phase2StartedAt": "2026-08-27T08:34:54.738Z",
+    "completedAt": "2026-08-27T08:34:57.554Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "朽葉",
+    "targetHex": "#917347",
+    "shortlistedDyeHexes": [
+      "#996e3f",
+      "#92816c",
+      "#c57424",
+      "#615245",
+      "#a2875c",
+      "#7b5c2d",
+      "#bc8804",
+      "#a58430"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#996e3f",
+        "action": "add",
+        "at": "2026-08-27T08:35:01.488Z"
+      },
+      {
+        "hex": "#92816c",
+        "action": "add",
+        "at": "2026-08-27T08:35:02.755Z"
+      },
+      {
+        "hex": "#c57424",
+        "action": "add",
+        "at": "2026-08-27T08:35:03.921Z"
+      },
+      {
+        "hex": "#615245",
+        "action": "add",
+        "at": "2026-08-27T08:35:04.721Z"
+      },
+      {
+        "hex": "#a2875c",
+        "action": "add",
+        "at": "2026-08-27T08:35:06.255Z"
+      },
+      {
+        "hex": "#7b5c2d",
+        "action": "add",
+        "at": "2026-08-27T08:35:07.588Z"
+      },
+      {
+        "hex": "#bc8804",
+        "action": "add",
+        "at": "2026-08-27T08:35:08.388Z"
+      },
+      {
+        "hex": "#a58430",
+        "action": "add",
+        "at": "2026-08-27T08:35:08.821Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#92816c",
+      "#7b5c2d",
+      "#c57424",
+      "#996e3f",
+      "#a58430",
+      "#a2875c",
+      "#615245",
+      "#bc8804"
+    ],
+    "selectedDyeHex": "#a2875c",
+    "selectionHistory": [
+      {
+        "hex": "#996e3f",
+        "at": "2026-08-27T08:35:17.471Z"
+      },
+      {
+        "hex": "#a2875c",
+        "at": "2026-08-27T08:35:24.038Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:34:59.638Z",
+    "phase1CompletedAt": "2026-08-27T08:35:12.705Z",
+    "phase2StartedAt": "2026-08-27T08:35:12.705Z",
+    "completedAt": "2026-08-27T08:35:24.038Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "檜皮色",
+    "targetHex": "#6e4632",
+    "shortlistedDyeHexes": [
+      "#996e3f",
+      "#8e581b",
+      "#6e3d24",
+      "#6a4b37",
+      "#7b5c2d",
+      "#644216"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#996e3f",
+        "action": "add",
+        "at": "2026-08-27T08:35:36.405Z"
+      },
+      {
+        "hex": "#8e581b",
+        "action": "add",
+        "at": "2026-08-27T08:35:36.855Z"
+      },
+      {
+        "hex": "#6e3d24",
+        "action": "add",
+        "at": "2026-08-27T08:35:38.388Z"
+      },
+      {
+        "hex": "#6a4b37",
+        "action": "add",
+        "at": "2026-08-27T08:35:40.038Z"
+      },
+      {
+        "hex": "#7b5c2d",
+        "action": "add",
+        "at": "2026-08-27T08:35:40.822Z"
+      },
+      {
+        "hex": "#644216",
+        "action": "add",
+        "at": "2026-08-27T08:35:43.188Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#7b5c2d",
+      "#8e581b",
+      "#996e3f",
+      "#6a4b37",
+      "#6e3d24",
+      "#644216"
+    ],
+    "selectedDyeHex": "#6e3d24",
+    "selectionHistory": [
+      {
+        "hex": "#6a4b37",
+        "at": "2026-08-27T08:35:48.288Z"
+      },
+      {
+        "hex": "#6e3d24",
+        "at": "2026-08-27T08:35:50.922Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:35:34.488Z",
+    "phase1CompletedAt": "2026-08-27T08:35:44.355Z",
+    "phase2StartedAt": "2026-08-27T08:35:44.355Z",
+    "completedAt": "2026-08-27T08:35:52.138Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "紅花",
+    "targetHex": "#e95464",
+    "shortlistedDyeHexes": [
+      "#e69f96",
+      "#cc6c5e",
+      "#913b27"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#e69f96",
+        "action": "add",
+        "at": "2026-08-27T08:35:56.105Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:35:56.588Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:36:00.155Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#e69f96",
+      "#cc6c5e",
+      "#913b27"
+    ],
+    "selectedDyeHex": "#cc6c5e",
+    "selectionHistory": [
+      {
+        "hex": "#cc6c5e",
+        "at": "2026-08-27T08:36:02.838Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:35:53.522Z",
+    "phase1CompletedAt": "2026-08-27T08:36:01.088Z",
+    "phase2StartedAt": "2026-08-27T08:36:01.088Z",
+    "completedAt": "2026-08-27T08:36:03.972Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃黄",
+    "targetHex": "#edb918",
+    "shortlistedDyeHexes": [
+      "#fac62b",
+      "#f2d770",
+      "#e49e34",
+      "#bc8804"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fac62b",
+        "action": "add",
+        "at": "2026-08-27T08:36:06.555Z"
+      },
+      {
+        "hex": "#f2d770",
+        "action": "add",
+        "at": "2026-08-27T08:36:07.605Z"
+      },
+      {
+        "hex": "#e49e34",
+        "action": "add",
+        "at": "2026-08-27T08:36:09.138Z"
+      },
+      {
+        "hex": "#bc8804",
+        "action": "add",
+        "at": "2026-08-27T08:36:10.122Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#e49e34",
+      "#fac62b",
+      "#bc8804",
+      "#f2d770"
+    ],
+    "selectedDyeHex": "#fac62b",
+    "selectionHistory": [
+      {
+        "hex": "#fac62b",
+        "at": "2026-08-27T08:36:13.755Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:36:05.005Z",
+    "phase1CompletedAt": "2026-08-27T08:36:11.172Z",
+    "phase2StartedAt": "2026-08-27T08:36:11.172Z",
+    "completedAt": "2026-08-27T08:36:14.622Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "葡萄",
+    "targetHex": "#6e1e51",
+    "shortlistedDyeHexes": [
+      "#514560",
+      "#66304e",
+      "#79526c",
+      "#5b1729"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#514560",
+        "action": "add",
+        "at": "2026-08-27T08:36:20.172Z"
+      },
+      {
+        "hex": "#66304e",
+        "action": "add",
+        "at": "2026-08-27T08:36:21.372Z"
+      },
+      {
+        "hex": "#79526c",
+        "action": "add",
+        "at": "2026-08-27T08:36:21.805Z"
+      },
+      {
+        "hex": "#5b1729",
+        "action": "add",
+        "at": "2026-08-27T08:36:22.355Z"
+      },
+      {
+        "hex": "#b79ebc",
+        "action": "add",
+        "at": "2026-08-27T08:36:23.539Z"
+      },
+      {
+        "hex": "#3b2a3d",
+        "action": "add",
+        "at": "2026-08-27T08:36:24.105Z"
+      },
+      {
+        "hex": "#b79ebc",
+        "action": "remove",
+        "at": "2026-08-27T08:36:24.872Z"
+      },
+      {
+        "hex": "#3b2a3d",
+        "action": "remove",
+        "at": "2026-08-27T08:36:25.689Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#79526c",
+      "#514560",
+      "#5b1729",
+      "#66304e"
+    ],
+    "selectedDyeHex": "#66304e",
+    "selectionHistory": [
+      {
+        "hex": "#66304e",
+        "at": "2026-08-27T08:36:32.522Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:36:16.805Z",
+    "phase1CompletedAt": "2026-08-27T08:36:26.472Z",
+    "phase2StartedAt": "2026-08-27T08:36:26.472Z",
+    "completedAt": "2026-08-27T08:36:33.305Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "桜花",
+    "targetHex": "#fcbec2",
+    "shortlistedDyeHexes": [
+      "#fdc8c6",
+      "#e69f96",
+      "#cc6c5e",
+      "#fecef5"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fdc8c6",
+        "action": "add",
+        "at": "2026-08-27T08:36:36.055Z"
+      },
+      {
+        "hex": "#e69f96",
+        "action": "add",
+        "at": "2026-08-27T08:36:36.472Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:36:36.939Z"
+      },
+      {
+        "hex": "#fecef5",
+        "action": "add",
+        "at": "2026-08-27T08:36:38.955Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#fdc8c6",
+      "#e69f96",
+      "#fecef5",
+      "#cc6c5e"
+    ],
+    "selectedDyeHex": "#fdc8c6",
+    "selectionHistory": [
+      {
+        "hex": "#fdc8c6",
+        "at": "2026-08-27T08:36:41.272Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:36:34.189Z",
+    "phase1CompletedAt": "2026-08-27T08:36:39.422Z",
+    "phase2StartedAt": "2026-08-27T08:36:39.422Z",
+    "completedAt": "2026-08-27T08:36:42.072Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄蘇芳",
+    "targetHex": "#a25768",
+    "shortlistedDyeHexes": [
+      "#79526c",
+      "#66304e",
+      "#b79ebc",
+      "#877fae",
+      "#514560"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#79526c",
+        "action": "add",
+        "at": "2026-08-27T08:36:46.106Z"
+      },
+      {
+        "hex": "#66304e",
+        "action": "add",
+        "at": "2026-08-27T08:36:46.589Z"
+      },
+      {
+        "hex": "#b79ebc",
+        "action": "add",
+        "at": "2026-08-27T08:36:48.139Z"
+      },
+      {
+        "hex": "#877fae",
+        "action": "add",
+        "at": "2026-08-27T08:36:48.989Z"
+      },
+      {
+        "hex": "#514560",
+        "action": "add",
+        "at": "2026-08-27T08:36:49.772Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#79526c",
+      "#514560",
+      "#877fae",
+      "#b79ebc",
+      "#66304e"
+    ],
+    "selectedDyeHex": "#66304e",
+    "selectionHistory": [
+      {
+        "hex": "#66304e",
+        "at": "2026-08-27T08:36:57.539Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "low",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:36:43.006Z",
+    "phase1CompletedAt": "2026-08-27T08:36:50.489Z",
+    "phase2StartedAt": "2026-08-27T08:36:50.489Z",
+    "completedAt": "2026-08-27T08:36:58.839Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "秘色",
+    "targetHex": "#abced8",
+    "shortlistedDyeHexes": [
+      "#b2c4ce",
+      "#83b0d2",
+      "#8e9bac",
+      "#96a4d9"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#b2c4ce",
+        "action": "add",
+        "at": "2026-08-27T08:37:03.189Z"
+      },
+      {
+        "hex": "#83b0d2",
+        "action": "add",
+        "at": "2026-08-27T08:37:03.956Z"
+      },
+      {
+        "hex": "#8e9bac",
+        "action": "add",
+        "at": "2026-08-27T08:37:04.889Z"
+      },
+      {
+        "hex": "#96a4d9",
+        "action": "add",
+        "at": "2026-08-27T08:37:06.122Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#b2c4ce",
+      "#8e9bac",
+      "#96a4d9",
+      "#83b0d2"
+    ],
+    "selectedDyeHex": "#b2c4ce",
+    "selectionHistory": [
+      {
+        "hex": "#b2c4ce",
+        "at": "2026-08-27T08:37:12.089Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:36:59.772Z",
+    "phase1CompletedAt": "2026-08-27T08:37:08.106Z",
+    "phase2StartedAt": "2026-08-27T08:37:08.106Z",
+    "completedAt": "2026-08-27T08:37:14.456Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "蘇芳",
+    "targetHex": "#a34150",
+    "shortlistedDyeHexes": [
+      "#cc6c5e",
+      "#913b27",
+      "#b75c2d",
+      "#7d3906",
+      "#8e581b"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:37:19.472Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:37:19.923Z"
+      },
+      {
+        "hex": "#b75c2d",
+        "action": "add",
+        "at": "2026-08-27T08:37:20.773Z"
+      },
+      {
+        "hex": "#7d3906",
+        "action": "add",
+        "at": "2026-08-27T08:37:21.839Z"
+      },
+      {
+        "hex": "#8e581b",
+        "action": "add",
+        "at": "2026-08-27T08:37:23.239Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#8e581b",
+      "#913b27",
+      "#cc6c5e",
+      "#b75c2d",
+      "#7d3906"
+    ],
+    "selectedDyeHex": "#cc6c5e",
+    "selectionHistory": [
+      {
+        "hex": "#913b27",
+        "at": "2026-08-27T08:37:26.989Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "at": "2026-08-27T08:37:33.489Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:37:16.489Z",
+    "phase1CompletedAt": "2026-08-27T08:37:24.173Z",
+    "phase2StartedAt": "2026-08-27T08:37:24.173Z",
+    "completedAt": "2026-08-27T08:37:33.489Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "縹",
+    "targetHex": "#148cb8",
+    "shortlistedDyeHexes": [
+      "#3b6886",
+      "#5b7fc0",
+      "#2f5889",
+      "#6481a0"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#3b6886",
+        "action": "add",
+        "at": "2026-08-27T08:38:00.640Z"
+      },
+      {
+        "hex": "#5b7fc0",
+        "action": "add",
+        "at": "2026-08-27T08:38:02.857Z"
+      },
+      {
+        "hex": "#2f5889",
+        "action": "add",
+        "at": "2026-08-27T08:38:04.790Z"
+      },
+      {
+        "hex": "#6481a0",
+        "action": "add",
+        "at": "2026-08-27T08:38:08.723Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#2f5889",
+      "#3b6886",
+      "#6481a0",
+      "#5b7fc0"
+    ],
+    "selectedDyeHex": "#3b6886",
+    "selectionHistory": [
+      {
+        "hex": "#3b6886",
+        "at": "2026-08-27T08:38:12.140Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:37:57.090Z",
+    "phase1CompletedAt": "2026-08-27T08:38:09.540Z",
+    "phase2StartedAt": "2026-08-27T08:38:09.540Z",
+    "completedAt": "2026-08-27T08:38:19.707Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "紅",
+    "targetHex": "#dc1a43",
+    "shortlistedDyeHexes": [
+      "#cc6c5e",
+      "#913b27",
+      "#b75c2d",
+      "#7d3906"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:38:23.307Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:38:23.773Z"
+      },
+      {
+        "hex": "#b75c2d",
+        "action": "add",
+        "at": "2026-08-27T08:38:24.640Z"
+      },
+      {
+        "hex": "#7d3906",
+        "action": "add",
+        "at": "2026-08-27T08:38:26.190Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#913b27",
+      "#b75c2d",
+      "#7d3906",
+      "#cc6c5e"
+    ],
+    "selectedDyeHex": "#cc6c5e",
+    "selectionHistory": [
+      {
+        "hex": "#cc6c5e",
+        "at": "2026-08-27T08:38:29.923Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "low",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:38:20.523Z",
+    "phase1CompletedAt": "2026-08-27T08:38:27.123Z",
+    "phase2StartedAt": "2026-08-27T08:38:27.123Z",
+    "completedAt": "2026-08-27T08:38:30.757Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃縹",
+    "targetHex": "#2a4073",
+    "shortlistedDyeHexes": [
+      "#1c3d54",
+      "#2f5889",
+      "#234172",
+      "#273067"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#1c3d54",
+        "action": "add",
+        "at": "2026-08-27T08:38:34.223Z"
+      },
+      {
+        "hex": "#2f5889",
+        "action": "add",
+        "at": "2026-08-27T08:38:35.607Z"
+      },
+      {
+        "hex": "#234172",
+        "action": "add",
+        "at": "2026-08-27T08:38:36.557Z"
+      },
+      {
+        "hex": "#273067",
+        "action": "add",
+        "at": "2026-08-27T08:38:37.973Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#273067",
+      "#2f5889",
+      "#234172",
+      "#1c3d54"
+    ],
+    "selectedDyeHex": "#234172",
+    "selectionHistory": [
+      {
+        "hex": "#234172",
+        "at": "2026-08-27T08:38:46.940Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": true,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:38:31.840Z",
+    "phase1CompletedAt": "2026-08-27T08:38:39.757Z",
+    "phase2StartedAt": "2026-08-27T08:38:39.757Z",
+    "completedAt": "2026-08-27T08:38:47.857Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "紅梅",
+    "targetHex": "#ed858d",
+    "shortlistedDyeHexes": [
+      "#fdc8c6",
+      "#e69f96",
+      "#cc6c5e",
+      "#fecef5",
+      "#dc9bca"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fdc8c6",
+        "action": "add",
+        "at": "2026-08-27T08:38:50.857Z"
+      },
+      {
+        "hex": "#e69f96",
+        "action": "add",
+        "at": "2026-08-27T08:38:51.291Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:38:51.708Z"
+      },
+      {
+        "hex": "#fecef5",
+        "action": "add",
+        "at": "2026-08-27T08:38:54.025Z"
+      },
+      {
+        "hex": "#dc9bca",
+        "action": "add",
+        "at": "2026-08-27T08:38:54.525Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#e69f96",
+      "#fecef5",
+      "#dc9bca",
+      "#fdc8c6",
+      "#cc6c5e"
+    ],
+    "selectedDyeHex": "#fdc8c6",
+    "selectionHistory": [
+      {
+        "hex": "#fdc8c6",
+        "at": "2026-08-27T08:39:05.446Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:38:49.107Z",
+    "phase1CompletedAt": "2026-08-27T08:38:55.059Z",
+    "phase2StartedAt": "2026-08-27T08:38:55.059Z",
+    "completedAt": "2026-08-27T08:39:06.330Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃香",
+    "targetHex": "#9e5c46",
+    "shortlistedDyeHexes": [
+      "#996e3f",
+      "#8e581b",
+      "#92816c",
+      "#644216",
+      "#6e3d24",
+      "#6a4b37",
+      "#7b5c2d",
+      "#a58430"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#996e3f",
+        "action": "add",
+        "at": "2026-08-27T08:39:10.731Z"
+      },
+      {
+        "hex": "#8e581b",
+        "action": "add",
+        "at": "2026-08-27T08:39:11.447Z"
+      },
+      {
+        "hex": "#92816c",
+        "action": "add",
+        "at": "2026-08-27T08:39:12.514Z"
+      },
+      {
+        "hex": "#b9a489",
+        "action": "add",
+        "at": "2026-08-27T08:39:12.922Z"
+      },
+      {
+        "hex": "#644216",
+        "action": "add",
+        "at": "2026-08-27T08:39:14.148Z"
+      },
+      {
+        "hex": "#b9a489",
+        "action": "remove",
+        "at": "2026-08-27T08:39:15.515Z"
+      },
+      {
+        "hex": "#6e3d24",
+        "action": "add",
+        "at": "2026-08-27T08:39:17.265Z"
+      },
+      {
+        "hex": "#6a4b37",
+        "action": "add",
+        "at": "2026-08-27T08:39:18.365Z"
+      },
+      {
+        "hex": "#7b5c2d",
+        "action": "add",
+        "at": "2026-08-27T08:39:19.199Z"
+      },
+      {
+        "hex": "#a58430",
+        "action": "add",
+        "at": "2026-08-27T08:39:21.066Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#a58430",
+      "#8e581b",
+      "#996e3f",
+      "#7b5c2d",
+      "#644216",
+      "#92816c",
+      "#6e3d24",
+      "#6a4b37"
+    ],
+    "selectedDyeHex": "#996e3f",
+    "selectionHistory": [
+      {
+        "hex": "#996e3f",
+        "at": "2026-08-27T08:39:42.683Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "low",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:39:07.098Z",
+    "phase1CompletedAt": "2026-08-27T08:39:23.682Z",
+    "phase2StartedAt": "2026-08-27T08:39:23.682Z",
+    "completedAt": "2026-08-27T08:39:43.600Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "二藍",
+    "targetHex": "#8c73a3",
+    "shortlistedDyeHexes": [
+      "#b79ebc",
+      "#877fae",
+      "#bbb5da",
+      "#79526c",
+      "#dc9bca"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#b79ebc",
+        "action": "add",
+        "at": "2026-08-27T08:39:47.984Z"
+      },
+      {
+        "hex": "#877fae",
+        "action": "add",
+        "at": "2026-08-27T08:39:48.800Z"
+      },
+      {
+        "hex": "#bbb5da",
+        "action": "add",
+        "at": "2026-08-27T08:39:49.250Z"
+      },
+      {
+        "hex": "#79526c",
+        "action": "add",
+        "at": "2026-08-27T08:39:51.317Z"
+      },
+      {
+        "hex": "#dc9bca",
+        "action": "add",
+        "at": "2026-08-27T08:39:51.700Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#b79ebc",
+      "#79526c",
+      "#bbb5da",
+      "#877fae",
+      "#dc9bca"
+    ],
+    "selectedDyeHex": "#877fae",
+    "selectionHistory": [
+      {
+        "hex": "#877fae",
+        "at": "2026-08-27T08:39:56.451Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:39:45.334Z",
+    "phase1CompletedAt": "2026-08-27T08:39:52.434Z",
+    "phase2StartedAt": "2026-08-27T08:39:52.434Z",
+    "completedAt": "2026-08-27T08:39:57.384Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "香",
+    "targetHex": "#efcd9a",
+    "shortlistedDyeHexes": [
+      "#b9a489",
+      "#b7a370",
+      "#ebd3a0",
+      "#f2d770"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#b9a489",
+        "action": "add",
+        "at": "2026-08-27T08:40:18.918Z"
+      },
+      {
+        "hex": "#b7a370",
+        "action": "add",
+        "at": "2026-08-27T08:40:19.534Z"
+      },
+      {
+        "hex": "#ebd3a0",
+        "action": "add",
+        "at": "2026-08-27T08:40:20.334Z"
+      },
+      {
+        "hex": "#f2d770",
+        "action": "add",
+        "at": "2026-08-27T08:40:22.301Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#f2d770",
+      "#b9a489",
+      "#ebd3a0",
+      "#b7a370"
+    ],
+    "selectedDyeHex": "#ebd3a0",
+    "selectionHistory": [
+      {
+        "hex": "#ebd3a0",
+        "at": "2026-08-27T08:40:28.735Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:40:15.168Z",
+    "phase1CompletedAt": "2026-08-27T08:40:26.318Z",
+    "phase2StartedAt": "2026-08-27T08:40:26.318Z",
+    "completedAt": "2026-08-27T08:40:29.735Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "萌黄",
+    "targetHex": "#98c337",
+    "shortlistedDyeHexes": [
+      "#9bb363",
+      "#658241",
+      "#abb054",
+      "#707326"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#9bb363",
+        "action": "add",
+        "at": "2026-08-27T08:40:41.868Z"
+      },
+      {
+        "hex": "#658241",
+        "action": "add",
+        "at": "2026-08-27T08:40:42.618Z"
+      },
+      {
+        "hex": "#abb054",
+        "action": "add",
+        "at": "2026-08-27T08:40:43.968Z"
+      },
+      {
+        "hex": "#707326",
+        "action": "add",
+        "at": "2026-08-27T08:40:44.401Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#707326",
+      "#658241",
+      "#abb054",
+      "#9bb363"
+    ],
+    "selectedDyeHex": "#9bb363",
+    "selectionHistory": [
+      {
+        "hex": "#9bb363",
+        "at": "2026-08-27T08:40:50.985Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": true,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:40:38.852Z",
+    "phase1CompletedAt": "2026-08-27T08:40:46.668Z",
+    "phase2StartedAt": "2026-08-27T08:40:46.668Z",
+    "completedAt": "2026-08-27T08:40:53.468Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "濃赤",
+    "targetHex": "#a80d2a",
+    "shortlistedDyeHexes": [
+      "#913b27",
+      "#7d3906",
+      "#781a1a",
+      "#451511"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:40:56.068Z"
+      },
+      {
+        "hex": "#7d3906",
+        "action": "add",
+        "at": "2026-08-27T08:40:57.668Z"
+      },
+      {
+        "hex": "#781a1a",
+        "action": "add",
+        "at": "2026-08-27T08:40:58.352Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:40:59.435Z"
+      },
+      {
+        "hex": "#451511",
+        "action": "add",
+        "at": "2026-08-27T08:41:00.702Z"
+      },
+      {
+        "hex": "#cc6c5e",
+        "action": "remove",
+        "at": "2026-08-27T08:41:03.852Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#913b27",
+      "#7d3906",
+      "#781a1a",
+      "#451511"
+    ],
+    "selectedDyeHex": "#781a1a",
+    "selectionHistory": [
+      {
+        "hex": "#781a1a",
+        "at": "2026-08-27T08:41:08.768Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:40:54.452Z",
+    "phase1CompletedAt": "2026-08-27T08:41:06.502Z",
+    "phase2StartedAt": "2026-08-27T08:41:06.502Z",
+    "completedAt": "2026-08-27T08:41:09.535Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄香",
+    "targetHex": "#f0cfa0",
+    "shortlistedDyeHexes": [
+      "#ebd3a0",
+      "#b9a489",
+      "#b7a370",
+      "#fbf1b4"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#ebd3a0",
+        "action": "add",
+        "at": "2026-08-27T08:41:13.202Z"
+      },
+      {
+        "hex": "#b9a489",
+        "action": "add",
+        "at": "2026-08-27T08:41:15.052Z"
+      },
+      {
+        "hex": "#b7a370",
+        "action": "add",
+        "at": "2026-08-27T08:41:15.735Z"
+      },
+      {
+        "hex": "#fbf1b4",
+        "action": "add",
+        "at": "2026-08-27T08:41:17.152Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#b7a370",
+      "#b9a489",
+      "#fbf1b4",
+      "#ebd3a0"
+    ],
+    "selectedDyeHex": "#ebd3a0",
+    "selectionHistory": [
+      {
+        "hex": "#ebd3a0",
+        "at": "2026-08-27T08:41:22.635Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:41:10.435Z",
+    "phase1CompletedAt": "2026-08-27T08:41:20.185Z",
+    "phase2StartedAt": "2026-08-27T08:41:20.185Z",
+    "completedAt": "2026-08-27T08:41:23.669Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "黄",
+    "targetHex": "#f5e56b",
+    "shortlistedDyeHexes": [
+      "#fac62b",
+      "#f2d770",
+      "#ebd3a0",
+      "#fbf1b4",
+      "#dbb457"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fac62b",
+        "action": "add",
+        "at": "2026-08-27T08:41:26.452Z"
+      },
+      {
+        "hex": "#f2d770",
+        "action": "add",
+        "at": "2026-08-27T08:41:27.019Z"
+      },
+      {
+        "hex": "#ebd3a0",
+        "action": "add",
+        "at": "2026-08-27T08:41:27.919Z"
+      },
+      {
+        "hex": "#fbf1b4",
+        "action": "add",
+        "at": "2026-08-27T08:41:28.486Z"
+      },
+      {
+        "hex": "#dbb457",
+        "action": "add",
+        "at": "2026-08-27T08:41:29.069Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#fac62b",
+      "#f2d770",
+      "#fbf1b4",
+      "#dbb457",
+      "#ebd3a0"
+    ],
+    "selectedDyeHex": "#f2d770",
+    "selectionHistory": [
+      {
+        "hex": "#f2d770",
+        "at": "2026-08-27T08:41:33.302Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:41:24.602Z",
+    "phase1CompletedAt": "2026-08-27T08:41:29.802Z",
+    "phase2StartedAt": "2026-08-27T08:41:29.802Z",
+    "completedAt": "2026-08-27T08:41:34.602Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "青×黄",
+    "targetHex": "#96a22a",
+    "shortlistedDyeHexes": [
+      "#9bb363",
+      "#658241",
+      "#707326",
+      "#abb054",
+      "#5f7558"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#9bb363",
+        "action": "add",
+        "at": "2026-08-27T08:41:38.586Z"
+      },
+      {
+        "hex": "#658241",
+        "action": "add",
+        "at": "2026-08-27T08:41:39.036Z"
+      },
+      {
+        "hex": "#707326",
+        "action": "add",
+        "at": "2026-08-27T08:41:41.869Z"
+      },
+      {
+        "hex": "#abb054",
+        "action": "add",
+        "at": "2026-08-27T08:41:43.969Z"
+      },
+      {
+        "hex": "#5f7558",
+        "action": "add",
+        "at": "2026-08-27T08:41:45.069Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#707326",
+      "#abb054",
+      "#5f7558",
+      "#658241",
+      "#9bb363"
+    ],
+    "selectedDyeHex": "#abb054",
+    "selectionHistory": [
+      {
+        "hex": "#abb054",
+        "at": "2026-08-27T08:41:49.652Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:41:35.519Z",
+    "phase1CompletedAt": "2026-08-27T08:41:46.236Z",
+    "phase2StartedAt": "2026-08-27T08:41:46.236Z",
+    "completedAt": "2026-08-27T08:41:50.469Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "山吹",
+    "targetHex": "#f8b500",
+    "shortlistedDyeHexes": [
+      "#fac62b",
+      "#f2d770",
+      "#e49e34"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fac62b",
+        "action": "add",
+        "at": "2026-08-27T08:41:52.786Z"
+      },
+      {
+        "hex": "#f2d770",
+        "action": "add",
+        "at": "2026-08-27T08:41:53.486Z"
+      },
+      {
+        "hex": "#e49e34",
+        "action": "add",
+        "at": "2026-08-27T08:41:54.736Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#f2d770",
+      "#fac62b",
+      "#e49e34"
+    ],
+    "selectedDyeHex": "#fac62b",
+    "selectionHistory": [
+      {
+        "hex": "#fac62b",
+        "at": "2026-08-27T08:41:57.219Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:41:51.369Z",
+    "phase1CompletedAt": "2026-08-27T08:41:55.569Z",
+    "phase2StartedAt": "2026-08-27T08:41:55.569Z",
+    "completedAt": "2026-08-27T08:41:57.936Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "香色",
+    "targetHex": "#efcd9a",
+    "shortlistedDyeHexes": [
+      "#b9a489",
+      "#c99156",
+      "#b7a370",
+      "#a2875c",
+      "#fbf1b4",
+      "#f2d770"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#b9a489",
+        "action": "add",
+        "at": "2026-08-27T08:42:01.103Z"
+      },
+      {
+        "hex": "#c99156",
+        "action": "add",
+        "at": "2026-08-27T08:42:02.136Z"
+      },
+      {
+        "hex": "#c57424",
+        "action": "add",
+        "at": "2026-08-27T08:42:03.069Z"
+      },
+      {
+        "hex": "#c57424",
+        "action": "remove",
+        "at": "2026-08-27T08:42:03.769Z"
+      },
+      {
+        "hex": "#b7a370",
+        "action": "add",
+        "at": "2026-08-27T08:42:04.419Z"
+      },
+      {
+        "hex": "#a2875c",
+        "action": "add",
+        "at": "2026-08-27T08:42:05.536Z"
+      },
+      {
+        "hex": "#fbf1b4",
+        "action": "add",
+        "at": "2026-08-27T08:42:11.369Z"
+      },
+      {
+        "hex": "#f2d770",
+        "action": "add",
+        "at": "2026-08-27T08:42:13.436Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#c99156",
+      "#fbf1b4",
+      "#a2875c",
+      "#b9a489",
+      "#f2d770",
+      "#b7a370"
+    ],
+    "selectedDyeHex": "#b9a489",
+    "selectionHistory": [
+      {
+        "hex": "#b9a489",
+        "at": "2026-08-27T08:42:23.786Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "low",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:41:59.419Z",
+    "phase1CompletedAt": "2026-08-27T08:42:14.503Z",
+    "phase2StartedAt": "2026-08-27T08:42:14.503Z",
+    "completedAt": "2026-08-27T08:42:24.670Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "薄縹",
+    "targetHex": "#507ea4",
+    "shortlistedDyeHexes": [
+      "#6481a0",
+      "#3b6886",
+      "#5b7fc0",
+      "#8e9bac",
+      "#2f5889"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#6481a0",
+        "action": "add",
+        "at": "2026-08-27T08:42:28.219Z"
+      },
+      {
+        "hex": "#3b6886",
+        "action": "add",
+        "at": "2026-08-27T08:42:30.003Z"
+      },
+      {
+        "hex": "#5b7fc0",
+        "action": "add",
+        "at": "2026-08-27T08:42:31.220Z"
+      },
+      {
+        "hex": "#8e9bac",
+        "action": "add",
+        "at": "2026-08-27T08:42:33.803Z"
+      },
+      {
+        "hex": "#2f5889",
+        "action": "add",
+        "at": "2026-08-27T08:42:34.970Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#3b6886",
+      "#2f5889",
+      "#6481a0",
+      "#5b7fc0",
+      "#8e9bac"
+    ],
+    "selectedDyeHex": "#3b6886",
+    "selectionHistory": [
+      {
+        "hex": "#3b6886",
+        "at": "2026-08-27T08:42:42.820Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:42:25.986Z",
+    "phase1CompletedAt": "2026-08-27T08:42:38.336Z",
+    "phase2StartedAt": "2026-08-27T08:42:38.336Z",
+    "completedAt": "2026-08-27T08:42:45.436Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "黄朽葉",
+    "targetHex": "#d3a243",
+    "shortlistedDyeHexes": [
+      "#dbb457",
+      "#bc8804",
+      "#e49e34",
+      "#c99156",
+      "#c57424"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#dbb457",
+        "action": "add",
+        "at": "2026-08-27T08:42:51.337Z"
+      },
+      {
+        "hex": "#bc8804",
+        "action": "add",
+        "at": "2026-08-27T08:42:52.320Z"
+      },
+      {
+        "hex": "#e49e34",
+        "action": "add",
+        "at": "2026-08-27T08:42:53.570Z"
+      },
+      {
+        "hex": "#c99156",
+        "action": "add",
+        "at": "2026-08-27T08:42:56.103Z"
+      },
+      {
+        "hex": "#c57424",
+        "action": "add",
+        "at": "2026-08-27T08:42:57.520Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#c57424",
+      "#c99156",
+      "#e49e34",
+      "#dbb457",
+      "#bc8804"
+    ],
+    "selectedDyeHex": "#dbb457",
+    "selectionHistory": [
+      {
+        "hex": "#dbb457",
+        "at": "2026-08-27T08:43:04.337Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:42:46.370Z",
+    "phase1CompletedAt": "2026-08-27T08:42:58.420Z",
+    "phase2StartedAt": "2026-08-27T08:42:58.420Z",
+    "completedAt": "2026-08-27T08:43:05.470Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "赤花",
+    "targetHex": "#d34c2c",
+    "shortlistedDyeHexes": [
+      "#cc6c5e",
+      "#913b27",
+      "#b75c2d",
+      "#7d3906"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#cc6c5e",
+        "action": "add",
+        "at": "2026-08-27T08:43:08.753Z"
+      },
+      {
+        "hex": "#913b27",
+        "action": "add",
+        "at": "2026-08-27T08:43:09.120Z"
+      },
+      {
+        "hex": "#b75c2d",
+        "action": "add",
+        "at": "2026-08-27T08:43:09.787Z"
+      },
+      {
+        "hex": "#7d3906",
+        "action": "add",
+        "at": "2026-08-27T08:43:10.703Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#cc6c5e",
+      "#b75c2d",
+      "#7d3906",
+      "#913b27"
+    ],
+    "selectedDyeHex": "#b75c2d",
+    "selectionHistory": [
+      {
+        "hex": "#b75c2d",
+        "at": "2026-08-27T08:43:18.554Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:43:06.520Z",
+    "phase1CompletedAt": "2026-08-27T08:43:16.370Z",
+    "phase2StartedAt": "2026-08-27T08:43:16.370Z",
+    "completedAt": "2026-08-27T08:43:19.537Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "淡黄",
+    "targetHex": "#e6ec2e",
+    "shortlistedDyeHexes": [
+      "#fac62b",
+      "#f2d770",
+      "#fbf1b4",
+      "#ebd3a0"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#fac62b",
+        "action": "add",
+        "at": "2026-08-27T08:43:23.804Z"
+      },
+      {
+        "hex": "#f2d770",
+        "action": "add",
+        "at": "2026-08-27T08:43:24.437Z"
+      },
+      {
+        "hex": "#fbf1b4",
+        "action": "add",
+        "at": "2026-08-27T08:43:25.387Z"
+      },
+      {
+        "hex": "#ebd3a0",
+        "action": "add",
+        "at": "2026-08-27T08:43:25.904Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#fbf1b4",
+      "#f2d770",
+      "#fac62b",
+      "#ebd3a0"
+    ],
+    "selectedDyeHex": "#f2d770",
+    "selectionHistory": [
+      {
+        "hex": "#f2d770",
+        "at": "2026-08-27T08:43:29.970Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "medium",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:43:21.154Z",
+    "phase1CompletedAt": "2026-08-27T08:43:26.770Z",
+    "phase2StartedAt": "2026-08-27T08:43:26.770Z",
+    "completedAt": "2026-08-27T08:43:30.737Z",
+    "method": "blind-human-selection"
+  },
+  {
+    "sessionId": "PhantomL4rd__mtb9bs83",
+    "targetId": "青",
+    "targetHex": "#2d5434",
+    "shortlistedDyeHexes": [
+      "#406339",
+      "#5f7558",
+      "#658241",
+      "#284b2c"
+    ],
+    "shortlistHistory": [
+      {
+        "hex": "#406339",
+        "action": "add",
+        "at": "2026-08-27T08:43:35.487Z"
+      },
+      {
+        "hex": "#5f7558",
+        "action": "add",
+        "at": "2026-08-27T08:43:35.971Z"
+      },
+      {
+        "hex": "#658241",
+        "action": "add",
+        "at": "2026-08-27T08:43:37.904Z"
+      },
+      {
+        "hex": "#284b2c",
+        "action": "add",
+        "at": "2026-08-27T08:43:38.604Z"
+      }
+    ],
+    "candidateDisplayOrderHexes": [
+      "#658241",
+      "#284b2c",
+      "#406339",
+      "#5f7558"
+    ],
+    "selectedDyeHex": "#284b2c",
+    "selectionHistory": [
+      {
+        "hex": "#284b2c",
+        "at": "2026-08-27T08:43:42.454Z"
+      }
+    ],
+    "tiedHexes": [],
+    "confidence": "high",
+    "uncertain": false,
+    "note": "",
+    "phase1StartedAt": "2026-08-27T08:43:32.904Z",
+    "phase1CompletedAt": "2026-08-27T08:43:39.287Z",
+    "phase2StartedAt": "2026-08-27T08:43:39.287Z",
+    "completedAt": "2026-08-27T08:43:43.371Z",
+    "method": "blind-human-selection"
+  }
+]

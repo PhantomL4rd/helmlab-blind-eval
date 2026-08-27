@@ -1,10 +1,34 @@
 import type { BlindTarget, FullDye, SessionFile, SnapshotMetadata, TargetRecord } from './types';
 
-export interface HumanPickExportRecord extends TargetRecord {
-  selectedDyeHex: string | null;
+export interface HexSelectionHistoryEntry {
+  hex: string;
+  at: string;
+}
+
+export interface HexShortlistHistoryEntry {
+  hex: string;
+  action: 'add' | 'remove';
+  at: string;
+}
+
+export interface HumanPickExportRecord {
+  sessionId: string;
+  targetId: string;
+  targetHex: string;
   shortlistedDyeHexes: string[];
+  shortlistHistory: HexShortlistHistoryEntry[];
   candidateDisplayOrderHexes: string[];
+  selectedDyeHex: string | null;
+  selectionHistory: HexSelectionHistoryEntry[];
   tiedHexes: string[];
+  confidence: TargetRecord['confidence'];
+  uncertain: boolean;
+  note: string;
+  phase1StartedAt: string;
+  phase1CompletedAt: string | null;
+  phase2StartedAt: string | null;
+  completedAt: string | null;
+  method: TargetRecord['method'];
 }
 
 function resolveHex(id: string, dyeHexById: Map<string, string>): string {
@@ -12,9 +36,12 @@ function resolveHex(id: string, dyeHexById: Map<string, string>): string {
 }
 
 /**
- * Every id-referencing field is enriched with the matching hex alongside it (not instead of
- * it) — the Helmlab author asked for results in hex, not just FF14-internal dye ids, so a
- * consumer doesn't have to cross-reference dyes.json just to get a usable color value.
+ * Dye ids are FF14-internal and meaningless outside this app — every dye-referencing field is
+ * resolved to hex instead (not alongside; the Helmlab author asked for hex, not ids). Ids can
+ * still be cross-referenced via the accompanying dyes.json export if ever needed (hex is
+ * unique across the retest pool, so this is lossless for identification purposes).
+ * `availableDyeIds` is dropped entirely: it's the same ~97-dye pool on every record in a
+ * session, so repeating it per-target is pure redundancy — see the dyes.json export instead.
  */
 export function buildHumanPicksExport(
   sessions: SessionFile[],
@@ -23,15 +50,38 @@ export function buildHumanPicksExport(
   return sessions.flatMap((session) =>
     Object.values(session.records)
       .filter((record) => record.completedAt !== null)
-      .map((record) => ({
-        ...record,
-        selectedDyeHex: record.selectedDyeId ? resolveHex(record.selectedDyeId, dyeHexById) : null,
-        shortlistedDyeHexes: record.shortlistedDyeIds.map((id) => resolveHex(id, dyeHexById)),
-        candidateDisplayOrderHexes: record.candidateDisplayOrder.map((id) =>
-          resolveHex(id, dyeHexById)
-        ),
-        tiedHexes: record.ties.map((id) => resolveHex(id, dyeHexById)),
-      }))
+      .map(
+        (record): HumanPickExportRecord => ({
+          sessionId: record.sessionId,
+          targetId: record.targetId,
+          targetHex: record.targetHex,
+          shortlistedDyeHexes: record.shortlistedDyeIds.map((id) => resolveHex(id, dyeHexById)),
+          shortlistHistory: record.shortlistHistory.map(({ dyeId, action, at }) => ({
+            hex: resolveHex(dyeId, dyeHexById),
+            action,
+            at,
+          })),
+          candidateDisplayOrderHexes: record.candidateDisplayOrder.map((id) =>
+            resolveHex(id, dyeHexById)
+          ),
+          selectedDyeHex: record.selectedDyeId
+            ? resolveHex(record.selectedDyeId, dyeHexById)
+            : null,
+          selectionHistory: record.selectionHistory.map(({ dyeId, at }) => ({
+            hex: resolveHex(dyeId, dyeHexById),
+            at,
+          })),
+          tiedHexes: record.ties.map((id) => resolveHex(id, dyeHexById)),
+          confidence: record.confidence,
+          uncertain: record.uncertain,
+          note: record.note,
+          phase1StartedAt: record.phase1StartedAt,
+          phase1CompletedAt: record.phase1CompletedAt,
+          phase2StartedAt: record.phase2StartedAt,
+          completedAt: record.completedAt,
+          method: record.method,
+        })
+      )
   );
 }
 

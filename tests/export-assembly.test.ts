@@ -78,16 +78,26 @@ describe('buildHumanPicksExport', () => {
     expect(picks.map((p) => p.sessionId).sort()).toEqual(['sess1', 'sess2']);
   });
 
-  it('resolves selectedDyeId, shortlistedDyeIds, candidateDisplayOrder, and ties to hex alongside the ids', () => {
+  it('replaces every dye-id-referencing field with its hex — no dye_NNN ids anywhere in the output', () => {
     const picks = buildHumanPicksExport([makeSession()], DYE_HEX_BY_ID);
-    expect(picks[0].selectedDyeId).toBe('dye_014');
     expect(picks[0].selectedDyeHex).toBe('#de0b16');
-    expect(picks[0].shortlistedDyeIds).toEqual(['dye_014', 'dye_015']);
     expect(picks[0].shortlistedDyeHexes).toEqual(['#de0b16', '#913b27']);
-    expect(picks[0].candidateDisplayOrder).toEqual(['dye_015', 'dye_014']);
     expect(picks[0].candidateDisplayOrderHexes).toEqual(['#913b27', '#de0b16']);
-    expect(picks[0].ties).toEqual(['dye_015']);
     expect(picks[0].tiedHexes).toEqual(['#913b27']);
+    expect(JSON.stringify(picks)).not.toMatch(/dye_\d+/);
+  });
+
+  it('converts shortlistHistory and selectionHistory entries from dyeId to hex', () => {
+    const picks = buildHumanPicksExport([makeSession()], DYE_HEX_BY_ID);
+    expect(picks[0].shortlistHistory).toEqual([
+      { hex: '#de0b16', action: 'add', at: '2026-08-27T09:59:30.000Z' },
+    ]);
+    expect(picks[0].selectionHistory).toEqual([{ hex: '#de0b16', at: '2026-08-27T10:00:00.000Z' }]);
+  });
+
+  it('drops availableDyeIds entirely — identical across every record in a session, so redundant here (see dyes.json export instead)', () => {
+    const picks = buildHumanPicksExport([makeSession()], DYE_HEX_BY_ID);
+    expect(picks[0]).not.toHaveProperty('availableDyeIds');
   });
 
   it('resolves selectedDyeHex to null when there is no pick (uncertain path)', () => {
@@ -95,7 +105,6 @@ describe('buildHumanPicksExport', () => {
       [makeSession({ records: { 赤: makeRecord({ selectedDyeId: null, uncertain: true }) } })],
       DYE_HEX_BY_ID
     );
-    expect(picks[0].selectedDyeId).toBeNull();
     expect(picks[0].selectedDyeHex).toBeNull();
   });
 });
