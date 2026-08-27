@@ -1,0 +1,13 @@
+{
+  "method": "full-pool-human-shortlist",
+  "excludedTags": [
+    "metallic",
+    "vivid"
+  ],
+  "poolSize": 97,
+  "totalDyes": 125,
+  "totalTargets": 64,
+  "layoutMethod": "hue-sort",
+  "sourceCommit": "7a94d555a6879d05e2b2f3afc559724315790d0b",
+  "generatedAt": "2026-08-27T08:19:13.200Z"
+}

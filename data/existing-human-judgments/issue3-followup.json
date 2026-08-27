@@ -1,0 +1,74 @@
+{
+  "source": {
+    "repo": "https://github.com/PhantomL4rd/helmlab-issue3-followup",
+    "relatedIssue": "https://github.com/Grkmyldz148/helmlab/issues/3",
+    "evaluator": "PhantomL4rd (single evaluator — colorant-picker's primary user/author)",
+    "recordedAt": "date not stated in the source repo; see the source repo's own commit history for a bound",
+    "protocol": "non-blind — for each target, the evaluator was shown exactly 3 candidate swatches, each already labeled with which algorithm proposed it (helmlab@0.14.0 top-1 / CIEDE2000 via culori@4.0.2 top-1 / OKLab ΔE via culori@4.0.2 top-1). The evaluator picked by eye from swatches alone, before looking at the metric numbers, but the algorithm-of-origin label WAS visible during selection. This is fundamentally different from the 2026 retest protocol in this repo, which hides algorithm identity, current dyeId, and all scores/ranks throughout.",
+    "candidateSetMethod": "NOT a broad pool. The source repo filtered colorant-picker's 51 (at the time) traditional-color targets down to a warm/brown hue sector (target OKLCH h in [20deg,110deg], C >= 0.03) AND further down to cases where helmlab's top-1 nearest dye disagreed with CIEDE2000's top-1 nearest dye. Only those disagreement cases were shown to the evaluator, and only the 3 algorithms' top-1 picks were offered as candidates (not the full ~109-dye pool). This means the 4 cases here are not representative of all targets, and the candidate set for each is exactly 3 items.",
+    "provenanceConfidence": "high for the pick itself (explicit, deliberate, recorded human judgment by a named person) — low for candidate-set breadth (only 3 algorithm-proposed candidates, not a full-pool comparison, and the 4 targets themselves were pre-selected for being disagreement cases, not a random or complete sample)",
+    "doNotTreatAsHumanGroundTruthDataset": "These 4 cases are kept separate from the 2026 retest (data/retest/) and must not be merged into human-picks.json. They may be compared against the retest results and against the algorithmic-baseline post-hoc, per methodology."
+  },
+  "cases": [
+    {
+      "targetId": "濃赤",
+      "targetReading": "こきあか",
+      "targetHex": "#a80d2a",
+      "targetOklch": { "h": 20.7, "c": 0.181, "l": 0.487 },
+      "candidatesShown": [
+        { "algorithmLabel": "helmlab", "dyeId": "dye_116", "dyeName": "Carmine Red", "hex": "#de0b16" },
+        { "algorithmLabel": "CIEDE2000", "dyeId": "dye_011", "dyeName": "Dalamud Red", "hex": "#781a1a" },
+        { "algorithmLabel": "OKLab", "dyeId": "dye_015", "dyeName": "Blood Red", "hex": "#913b27" }
+      ],
+      "selectedDyeId": "dye_011",
+      "selectedDyeName": "Dalamud Red",
+      "selectedViaAlgorithmLabel": "CIEDE2000",
+      "evaluatorNote": "issue-body case; one of 4 disagreement cases in the warm/brown sector"
+    },
+    {
+      "targetId": "濃紅",
+      "targetReading": "こきくれない",
+      "targetHex": "#b40926",
+      "targetOklch": { "h": 22.8, "c": 0.193, "l": 0.503 },
+      "candidatesShown": [
+        { "algorithmLabel": "helmlab", "dyeId": "dye_116", "dyeName": "Carmine Red", "hex": "#de0b16" },
+        { "algorithmLabel": "CIEDE2000", "dyeId": "dye_015", "dyeName": "Blood Red", "hex": "#913b27" },
+        { "algorithmLabel": "OKLab", "dyeId": "dye_015", "dyeName": "Blood Red", "hex": "#913b27" }
+      ],
+      "selectedDyeId": "dye_116",
+      "selectedDyeName": "Carmine Red",
+      "selectedViaAlgorithmLabel": "helmlab",
+      "evaluatorNote": "the one case (of 4) where helmlab's pick, not CIEDE2000's, matched the evaluator's eye"
+    },
+    {
+      "targetId": "濃香",
+      "targetReading": "こきこう",
+      "targetHex": "#9e5c46",
+      "targetOklch": { "h": 39.1, "c": 0.093, "l": 0.527 },
+      "candidatesShown": [
+        { "algorithmLabel": "helmlab", "dyeId": "dye_015", "dyeName": "Blood Red", "hex": "#913b27" },
+        { "algorithmLabel": "CIEDE2000", "dyeId": "dye_019", "dyeName": "Sunset Orange", "hex": "#b75c2d" },
+        { "algorithmLabel": "OKLab", "dyeId": "dye_026", "dyeName": "Qiqirn Brown", "hex": "#735f4f" }
+      ],
+      "selectedDyeId": "dye_019",
+      "selectedDyeName": "Sunset Orange",
+      "selectedViaAlgorithmLabel": "CIEDE2000",
+      "evaluatorNote": "same target as the original helmlab#3 issue body"
+    },
+    {
+      "targetId": "黄",
+      "targetReading": "き",
+      "targetHex": "#f5e56b",
+      "targetOklch": { "h": 101.9, "c": 0.143, "l": 0.908 },
+      "candidatesShown": [
+        { "algorithmLabel": "helmlab", "dyeId": "dye_046", "dyeName": "Canary Yellow", "hex": "#fef864" },
+        { "algorithmLabel": "CIEDE2000", "dyeId": "dye_043", "dyeName": "Cream Yellow", "hex": "#f2d770" },
+        { "algorithmLabel": "OKLab", "dyeId": "dye_043", "dyeName": "Cream Yellow", "hex": "#f2d770" }
+      ],
+      "selectedDyeId": "dye_043",
+      "selectedDyeName": "Cream Yellow",
+      "selectedViaAlgorithmLabel": "CIEDE2000 & OKLab",
+      "evaluatorNote": null
+    }
+  ]
+}

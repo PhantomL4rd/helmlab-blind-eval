@@ -1,0 +1,19 @@
+node_modules
+
+# data/ is intentionally NOT gitignored here. Raw human-judgment session data, the frozen
+# evaluation-time snapshot, and the exported deliverables are the point of this repo — they
+# get committed as they're produced, not treated as regenerable build output. Only atomic-write
+# temp files are excluded below.
+data/retest/sessions/*.tmp-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# Vite
+vite.config.ts.timestamp-*
+dist/

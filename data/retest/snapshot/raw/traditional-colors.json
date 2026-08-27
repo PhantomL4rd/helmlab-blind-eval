@@ -1,0 +1,454 @@
+{
+  "colors": [
+    {
+      "id": "白",
+      "reading": "しろ",
+      "hex": "#fffffe",
+      "dyeId": "dye_093",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "黒",
+      "reading": "くろ",
+      "hex": "#2b2b2b",
+      "note": "出所: colordic.org #2b2b2b",
+      "dyeId": "dye_007"
+    },
+    {
+      "id": "赤",
+      "reading": "あか",
+      "hex": "#ec001a",
+      "dyeId": "dye_014",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "青",
+      "reading": "あお",
+      "hex": "#2d5434",
+      "dyeId": "dye_057",
+      "note": "出所: 重ねの色目 中青 (ateitexe) — 古典では緑系"
+    },
+    {
+      "id": "黄",
+      "reading": "き",
+      "hex": "#f5e56b",
+      "dyeId": "dye_043",
+      "note": "出所: 刈安色 (colordic) — 平安期の代表的な黄染。irocore の現代「黄色」#ffd900 は鮮烈すぎるため差し替え"
+    },
+    {
+      "id": "紅",
+      "reading": "くれない",
+      "hex": "#dc1a43",
+      "dyeId": "dye_014",
+      "note": "出所: irocore紅色/colordic 平均"
+    },
+    {
+      "id": "紫",
+      "reading": "むらさき",
+      "hex": "#884898",
+      "dyeId": "dye_091",
+      "note": "出所: irocore/colordic 一致"
+    },
+    {
+      "id": "濃紫",
+      "reading": "こきむらさき",
+      "hex": "#4d384d",
+      "dyeId": "dye_088",
+      "note": "出所: irocore 深紫系 — 紫草の濃染め"
+    },
+    {
+      "id": "香",
+      "reading": "こう",
+      "hex": "#efcd9a",
+      "dyeId": "dye_037",
+      "note": "出所: irocore/colordic 一致 (香色と同義)"
+    },
+    {
+      "id": "縹",
+      "reading": "はなだ",
+      "hex": "#148cb8",
+      "dyeId": "dye_074",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "蘇芳",
+      "reading": "すおう",
+      "hex": "#a34150",
+      "dyeId": "dye_015",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "萌黄",
+      "reading": "もえぎ",
+      "hex": "#98c337",
+      "dyeId": "dye_055",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "紅梅",
+      "reading": "こうばい",
+      "hex": "#ed858d",
+      "dyeId": "dye_008",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "紅花",
+      "reading": "べにばな",
+      "hex": "#e95464",
+      "dyeId": "dye_014",
+      "note": "出所: 中紅花 (irocore/colordic) — 紅花染めの代表色"
+    },
+    {
+      "id": "赤花",
+      "reading": "あかばな",
+      "hex": "#d34c2c",
+      "dyeId": "dye_019",
+      "note": "出所: 赤蘇芳寄り (irocore #D34C2C) — 樺桜/桜の異説で使われる"
+    },
+    {
+      "id": "二藍",
+      "reading": "ふたあい",
+      "hex": "#8c73a3",
+      "dyeId": "dye_084",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "女郎花",
+      "reading": "おみなえし",
+      "hex": "#f2f2b0",
+      "dyeId": "dye_047",
+      "note": "出所: irocore/colordic 一致"
+    },
+    {
+      "id": "朽葉",
+      "reading": "くちば",
+      "hex": "#917347",
+      "dyeId": "dye_026",
+      "note": "出所: irocore/colordic 一致"
+    },
+    {
+      "id": "黄朽葉",
+      "reading": "きくちば",
+      "hex": "#d3a243",
+      "dyeId": "dye_041",
+      "note": "出所: colordic/irocore — 黄みが強い朽葉"
+    },
+    {
+      "id": "濃朽葉",
+      "reading": "こいくちば",
+      "hex": "#e07400",
+      "note": "出所: wa-iro.com — 黄みの強い深い橙、赤朽葉に近い",
+      "dyeId": "dye_029"
+    },
+    {
+      "id": "薄朽葉",
+      "reading": "うすくちば",
+      "hex": "#e8d3a2",
+      "dyeId": "dye_037",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "檜皮色",
+      "reading": "ひわだいろ",
+      "hex": "#6e4632",
+      "dyeId": "dye_021",
+      "note": "出所: 色名辞典系の暗色寄り値 (#6e4632)。樹皮の茶系をBark Brownへ自然に寄せる目的で辞典平均より暗くした"
+    },
+    {
+      "id": "瑠璃色",
+      "reading": "るりいろ",
+      "hex": "#0f4c9d",
+      "dyeId": "dye_075",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "秘色",
+      "reading": "ひそく",
+      "hex": "#abced8",
+      "dyeId": "dye_065",
+      "note": "出所: irocore/colordic 一致"
+    },
+    {
+      "id": "紺青",
+      "reading": "こんじょう",
+      "hex": "#192f60",
+      "dyeId": "dye_078",
+      "note": "出所: 和色辞典 colordic 代表値"
+    },
+    {
+      "id": "香色",
+      "reading": "こういろ",
+      "hex": "#efcd9a",
+      "dyeId": "dye_037",
+      "note": "出所: irocore/colordic 一致"
+    },
+    {
+      "id": "白瑩",
+      "reading": "しろつや",
+      "hex": "#f1f3f3",
+      "dyeId": "dye_114",
+      "lockDye": true,
+      "note": "Pearl Whiteを意図的に採用（瑩=シマー感の表現）"
+    },
+    {
+      "id": "鳥ノ子",
+      "reading": "とりのこ",
+      "hex": "#fbf0d0",
+      "dyeId": "dye_047",
+      "lockDye": true,
+      "note": "出所: irocore/colordic 中間値。色差的には Snow White (dye_002) の方が近い (CIEDE2000) が、鳥ノ子は薄クリーム色として Vanilla Yellow を意図的に採用"
+    },
+    {
+      "id": "淡紅",
+      "reading": "あわくれない",
+      "hex": "#d35871",
+      "dyeId": "dye_014",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "淡紫",
+      "reading": "あわむらさき",
+      "hex": "#874da1",
+      "dyeId": "dye_084",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "浅紫",
+      "reading": "あさむらさき",
+      "hex": "#c4a3bf",
+      "dyeId": "dye_087",
+      "note": "出所: irocore #C4A3BF — 淺紫(旧字)と同義"
+    },
+    {
+      "id": "淡青",
+      "reading": "あわあお",
+      "hex": "#29905e",
+      "dyeId": "dye_056",
+      "note": "出所: 重ねの色目辞典 (緑系)"
+    },
+    {
+      "id": "淡黄",
+      "reading": "あわき",
+      "hex": "#e6ec2e",
+      "dyeId": "dye_050",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "薄黄",
+      "reading": "うすき",
+      "hex": "#f6f193",
+      "dyeId": "dye_047",
+      "note": "出所: irocore/colordic 平均"
+    },
+    {
+      "id": "淡蘇芳",
+      "reading": "あわすおう",
+      "hex": "#871c40",
+      "dyeId": "dye_011",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "淡萌黄",
+      "reading": "あわもえぎ",
+      "hex": "#8fc947",
+      "dyeId": "dye_055",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "淡木賊",
+      "reading": "あわとくさ",
+      "hex": "#467852",
+      "dyeId": "dye_059",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "薄色",
+      "reading": "うすいろ",
+      "hex": "#a869be",
+      "dyeId": "dye_087",
+      "note": "出所: 重ねの色目辞典 (薄紫系)"
+    },
+    {
+      "id": "濃薄色",
+      "reading": "こきうすいろ",
+      "hex": "#795083",
+      "note": "薄色 #a869be と濃紫 #4d384d の OKLab 中間として算出",
+      "dyeId": "dye_091"
+    },
+    {
+      "id": "薄紅",
+      "reading": "うすくれない",
+      "hex": "#f4b2ba",
+      "dyeId": "dye_095",
+      "note": "出所: irocore 薄紅"
+    },
+    {
+      "id": "薄紅梅",
+      "reading": "うすこうばい",
+      "hex": "#e597b2",
+      "dyeId": "dye_090",
+      "note": "出所: 和色辞典 colordic"
+    },
+    {
+      "id": "薄紫",
+      "reading": "うすむらさき",
+      "hex": "#c4a3bf",
+      "dyeId": "dye_087",
+      "note": "出所: irocore/colordic 浅紫と同義"
+    },
+    {
+      "id": "薄香",
+      "reading": "うすこう",
+      "hex": "#f0cfa0",
+      "note": "出所: colordic.org #f0cfa0（香色のうすい変種、丁子染め）",
+      "dyeId": "dye_037"
+    },
+    {
+      "id": "山吹",
+      "reading": "やまぶき",
+      "hex": "#f8b500",
+      "note": "出所: colordic.org 山吹色 #f8b500",
+      "dyeId": "dye_040"
+    },
+    {
+      "id": "薄青",
+      "reading": "うすあお",
+      "hex": "#93b69c",
+      "dyeId": "dye_098",
+      "note": "出所: 和色辞典 colordic (緑系)"
+    },
+    {
+      "id": "薄蘇芳",
+      "reading": "うすすおう",
+      "hex": "#a25768",
+      "dyeId": "dye_009",
+      "note": "出所: colordic 浅蘇芳と同義"
+    },
+    {
+      "id": "薄萌黄",
+      "reading": "うすもえぎ",
+      "hex": "#badcad",
+      "dyeId": "dye_098",
+      "note": "出所: colordic 薄萌葱"
+    },
+    {
+      "id": "濃赤",
+      "reading": "こきあか",
+      "hex": "#a80d2a",
+      "dyeId": "dye_015",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "濃青",
+      "reading": "こきあお",
+      "hex": "#264a2e",
+      "dyeId": "dye_057",
+      "note": "出所: 重ねの色目辞典 (緑系)"
+    },
+    {
+      "id": "濃黄",
+      "reading": "こきき",
+      "hex": "#edb918",
+      "dyeId": "dye_040",
+      "note": "出所: 重ねの色目辞典 (山吹寄り)"
+    },
+    {
+      "id": "濃紅",
+      "reading": "こきくれない",
+      "hex": "#b40926",
+      "dyeId": "dye_015",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "濃紅梅",
+      "reading": "こきこうばい",
+      "hex": "#491022",
+      "dyeId": "dye_010",
+      "note": "出所: 重ねの色目辞典 (深紅紫)"
+    },
+    {
+      "id": "濃香",
+      "reading": "こきこう",
+      "hex": "#9e5c46",
+      "dyeId": "dye_015",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "濃蘇芳",
+      "reading": "こきすおう",
+      "hex": "#491022",
+      "dyeId": "dye_010",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "濃萌黄",
+      "reading": "こきもえぎ",
+      "hex": "#32540a",
+      "dyeId": "dye_058",
+      "note": "出所: 重ねの色目辞典"
+    },
+    {
+      "id": "濃二藍",
+      "reading": "こきふたあい",
+      "hex": "#644a77",
+      "dyeId": "dye_085",
+      "note": "出所: GIF画像サンプリング"
+    },
+    {
+      "id": "浅紅",
+      "reading": "あさきくれない",
+      "hex": "#f3a0aa",
+      "dyeId": "dye_008",
+      "note": "出所: color-sample 浅紅(あさべに)"
+    },
+    {
+      "id": "青黒味",
+      "reading": "あおぐろみ",
+      "hex": "#384e1e",
+      "dyeId": "dye_053",
+      "note": "出所: GIF画像サンプリング"
+    },
+    {
+      "id": "紅×黄",
+      "reading": "くれないとき",
+      "hex": "#e47c23",
+      "dyeId": "dye_029",
+      "note": "出所: 重ねの色目 紅×黄 RGB平均"
+    },
+    {
+      "id": "青×黄",
+      "reading": "あおとき",
+      "hex": "#96a22a",
+      "dyeId": "dye_050",
+      "note": "出所: 重ねの色目 青×黄 RGB平均 (青=緑系)"
+    },
+    {
+      "id": "桜花",
+      "reading": "さくらばな",
+      "hex": "#fcbec2",
+      "dyeId": "dye_095",
+      "note": "出所: 異説セクションbgcolor"
+    },
+    {
+      "id": "濃縹",
+      "reading": "こきはなだ",
+      "hex": "#2a4073",
+      "dyeId": "dye_076",
+      "note": "出所: irocore/colordic 深縹"
+    },
+    {
+      "id": "薄縹",
+      "reading": "うすはなだ",
+      "hex": "#507ea4",
+      "dyeId": "dye_067",
+      "note": "出所: 有職故実系の淡縹値。Seafog Blue が最近接"
+    },
+    {
+      "id": "葡萄",
+      "reading": "えび",
+      "hex": "#6e1e51",
+      "dyeId": "dye_092",
+      "note": "出所: irocore 葡萄色"
+    }
+  ]
+}

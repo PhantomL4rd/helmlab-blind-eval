@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light;
+  --neutral-bg: #c8c8c8;
+  --panel-bg: #d8d8d8;
+  --ink: #1a1a1a;
+  --ink-muted: #4a4a4a;
+  --accent: #2b6cb0;
+  --border: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--neutral-bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.swatch {
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  /* Rendering fidelity constraint: background-color is the literal hex, no opacity/filter/blend. */
+}
+
+.hex-label {
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
